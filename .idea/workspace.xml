@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="false" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ap4hB2pcC24oEU1gtteInTr8jW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hsbch\PycharmProjects\ACIweb\static\images" />
+      <recent name="C:\Users\hsbch\PycharmProjects\ACIweb" />
+      <recent name="C:\Users\hsbch\PycharmProjects\ACIweb\static" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\hsbch\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="" />
+      <created>1587419317522</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587419317522</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="false" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="false" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="false" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="false" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587880043361">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587880043361" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587677782273" />
+    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587420065132">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.316.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587420065132" />
+    <state x="614" y="106" key="CommitChangelistDialog2" timestamp="1587677629473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="614" y="106" key="CommitChangelistDialog2/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587677629473" />
+    <state x="259" y="9" key="SettingsEditor" timestamp="1587880087174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="259" y="9" key="SettingsEditor/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587880087174" />
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587708757297" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1587879060639">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587879060639" />
+    <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-306.1920.1040@0.0.1366.728" timestamp="1587725120095" />
+    <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587704392233" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587662307396" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587678100843" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/1920.316.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587499369140" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587677612264">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587677612264" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587428648163">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.316.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587428648163" />
+  </component>
+</project>

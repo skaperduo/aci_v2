@@ -1,0 +1,102 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+
+    </script>
+    <title>Agusan Colleges, Inc.</title>
+</head>
+<body class="body">
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'images/websiteBanner.png' %}" width="450" height="100" class="d-inline-block align-top"
+                 alt="">
+        </a>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="navigation">
+    <div class="container">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+<!--            <li><a href="{% url 'about_us' %}">About Us</a>-->
+            <li><a href="">About</a>
+                <ul class="about">
+                    <li><a href="{% url 'aci_history' %}">ACI History</a></li>
+                    <li><a href="{% url 'aci_vmgo' %}">ACI VMGO</a></li>
+                </ul>
+            </li>
+            <li><a href="">Programs</a>
+                <ul class="programs">
+                    <li><a href="{% url 'program_beed' %}">Bachelor of Elementary Education</a></li>
+                    <li><a href="{% url 'program_bsed' %}">Bachelor of Secondary Education</a></li>
+                    <li><a href="{% url 'program_bsba' %}">Bachelor of Science in Business Administration</a></li>
+                    <li><a href="{% url 'program_bsais' %}">Bachelor of Science in Accounting Information System</a></li>
+                    <li><a href="{% url 'program_bsit' %}">Bachelor of Science in Information Technology</a></li>
+                </ul>
+            </li>
+            <li><a href="">Admission</a>
+                <ul>
+                    <li><a href="{% url 'admission_requirements' %}">Admission Requirements</a></li>
+                    <li><a href="{% url 'admission' %}">Online Pre-registration</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <br>
+{% block content %}
+
+{% endblock %}
+    <br>
+</div>
+
+<div class="footer-main">
+    <div class="container">
+        <p>
+            M.H Del Pilar Street, Butuan City<br>
+            Agusan Del Norte, 8600, Philippines<br>
+            Tel. No. (085) 342-8004, Fax No. (085) 225-2330<br>
+            E-mail: agusan_colleges@yahoo.com.ph<br>
+        </p>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
