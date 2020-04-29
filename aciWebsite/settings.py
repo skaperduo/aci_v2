@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'admission',
     'about_us',
     'programs',
+    'admin_panel',
 ]
 
 MIDDLEWARE = [
