@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aciWebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aciWebsite/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -57,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588152283913</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new and latest interface heroku">
+      <created>1588155026345</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588155026345</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -67,7 +75,8 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="false" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="false" />
     <MESSAGE value="new and latest interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="new and latest interface" />
+    <MESSAGE value="new and latest interface heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="new and latest interface heroku" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587880043361">
@@ -79,10 +88,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.316.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587420065132" />
-    <state x="614" y="106" key="CommitChangelistDialog2" timestamp="1588152283193">
+    <state x="614" y="106" key="CommitChangelistDialog2" timestamp="1588155025743">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="106" key="CommitChangelistDialog2/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588152283193" />
+    <state x="614" y="106" key="CommitChangelistDialog2/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588155025743" />
     <state x="614" y="106" key="CommitChangelistDialog2/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587677629473" />
     <state x="259" y="9" key="SettingsEditor" timestamp="1587880087174">
       <screen x="0" y="0" width="1920" height="1040" />
