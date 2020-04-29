@@ -126,8 +126,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
@@ -141,7 +143,3 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'aciunofficial@gmail.com'
 EMAIL_HOST_PASSWORD = 'admin1951'
 EMAIL_PORT = 587
-
-
-import django_heroku
-django_heroku.settings(locals())
