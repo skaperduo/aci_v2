@@ -28,6 +28,7 @@ SECRET_KEY = '&+^v6$7v+f44q_+t1yfep#p0dnoi1o0zl0x#*908@k$#0csslq'
 DEBUG = True
 
 ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
+# ALLOWED_HOSTS = []
 
 
 # Application definition

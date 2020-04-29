@@ -93,16 +93,19 @@
     </b>
     <hr>
 
+    <div class="row justify-content-center">
     <div class="radio">
         {% for class in classification %}
         <label><input type="radio" name="stud_classification" value="{{ class.pk }}" required> {{ class.classification }}</label> &nbsp&nbsp&nbsp
         {% endfor %}
     </div>
+    </div>
 
     <br>
 
-    <div class="row">
-        <div class="col-4">
+    <div class="row justify-content-center">
+        <div class="col-12">
+        <div class="col">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text"><span class="required">*</span>Program</label>
@@ -116,7 +119,7 @@
             </div>
         </div>
 
-        <div class="col-4">
+        <div class="col">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text"><span class="required">*</span>Year Level</label>
@@ -130,7 +133,7 @@
             </div>
         </div>
 
-        <div class="col-4">
+        <div class="col">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text"><span class="required">*</span>Preferred Shift</label>
@@ -144,13 +147,14 @@
             </div>
         </div>
     </div>
+    </div>
 
     <br>
     <hr>
     <b><label>Student Personal Information</label></b>
     <hr>
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-4">
             <div class="form-group">
                 <label><span class="required">*</span>Name</label>
@@ -171,7 +175,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-4">
             <div class="form-group">
                 <label><span class="required">*</span>Birthdate</label>
@@ -186,7 +190,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-6">
             <div class="form-group">
                 <label>Religion</label>
@@ -201,7 +205,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-6">
             <div class="form-group">
                 <label><span class="required">*</span>Gender</label>
@@ -216,7 +220,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-6">
             <div class="form-group">
                 <label><span class="required">*</span>Email Address</label>
@@ -231,7 +235,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-6">
             <div class="form-group">
                 <label><span class="required">*</span>Mobile Number</label>
@@ -261,8 +265,8 @@
     </b>
     <hr>
 
-    <div class="row">
-        <div class="col-6">
+    <div class="row justify-content-center">
+        <div class="col-8">
             <div class="card" style="width: auto;">
                 <div class="card-body">
                     <h5 class="card-title">Where did you hear about ACI?</h5>
@@ -278,7 +282,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-6">
+    </div>
+    <br>
+    <div class="row row justify-content-center">
+        <div class="col-8">
             <div class="card" style="width: auto;">
                 <div class="card-body">
                     <h5 class="card-title">Why did you prefer to choose ACI?</h5>
@@ -296,8 +303,8 @@
         </div>
     </div>
     <br>
-    <div class="row">
-        <div class="col-12">
+    <div class="row justify-content-center">
+        <div class="col-8">
             <div class="card" style="width: auto;">
                 <div class="card-body">
                     <h5 class="card-title"><span class="required">*</span>Connectivity Capacity</h5>
@@ -321,7 +328,9 @@
         </div>
     </div>
     <br>
-    <button type="submit" class="btn btn-primary" value="select">Submit</button>
+    <div class="row justify-content-center">
+    <button type="submit" class="btn btn-primary" value="select" style="width:150px;">Submit</button>
+    </div>
     <br>
     <br>
 </form>
