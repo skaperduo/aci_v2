@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aciWebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aciWebsite/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,9 +81,10 @@
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587880043361" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587677782273" />
-    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587420065132">
+    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588157822456">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588157822456" />
     <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.316.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587420065132" />
     <state x="614" y="106" key="CommitChangelistDialog2" timestamp="1588155025743">
       <screen x="0" y="0" width="1920" height="1040" />
