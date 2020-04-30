@@ -27,8 +27,8 @@ SECRET_KEY = '&+^v6$7v+f44q_+t1yfep#p0dnoi1o0zl0x#*908@k$#0csslq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
+#ALLOWED_HOSTS = []
 
 
 # Application definition
