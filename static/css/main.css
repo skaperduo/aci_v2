@@ -18,19 +18,46 @@
     color: white;
 }
 
-.navLink a {
+
+.navLink .nav-link {
     color: black;
 }
 
-nav ul a:hover {
+.navLink .active {
+    background-color: black;
+    color: black;
+}
+
+.navbar .nav-item .nav-link {
+    color: white;
+}
+
+/*.dropdown:hover>.dropdown-menu {
+    display: block;
+    margin-left: 50px;
+    margin-top: 0px;
+}*/
+
+.dropdown .dropdown-menu {
+    margin-left: 50px;
+    margin-top: 0px;
+}
+
+.dropdown .dropdown-menu a:hover {
+    background-color: #b0b0b0;
+}
+
+nav .nav-link {
+    margin-left: 50px;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #b0b0b0;
     width: 100%;
-    background-color: #cfcfcf;
-    color: black;
 }
 
-nav ul li {
-    margin-left: 25px;
-    margin-right: 25px;
+/* Programs CSS */
+
+.programs ul li{
+    list-style: none;
 }
-
-
