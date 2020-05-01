@@ -27,8 +27,8 @@ SECRET_KEY = '&+^v6$7v+f44q_+t1yfep#p0dnoi1o0zl0x#*908@k$#0csslq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
-#ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'import_export',
     'homepage',
     'admission',
     'about_us',
@@ -147,3 +148,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'aciunofficial@gmail.com'
 EMAIL_HOST_PASSWORD = 'admin1951'
 EMAIL_PORT = 587
+
+LOGIN_REDIRECT_URL = 'admin_panel'
+

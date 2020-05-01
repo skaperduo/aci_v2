@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+        </div>
+        <div class="col-sm">
+            <center><h1>User's Registration</h1>
+                <hr>
+            </center>
+            <form method="POST">{% csrf_token %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                <fieldset class="form-group">
+                    {{ form }}
+                </fieldset>
+                    <hr>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+            </form>
+        </div>
+        <div class="col-sm">
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

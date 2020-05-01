@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+from datetime import datetime, date
 
 # Create your models here.
 
@@ -8,7 +10,7 @@ class Programs(models.Model):
     program_description = models.TextField
 
     def __str__(self):
-        return str(self.pk) + ' ' + self.program_title
+        return self.program_title
 
 
 class PreferredShift(models.Model):
@@ -23,7 +25,7 @@ class YearLevel(models.Model):
     year_level = models.CharField(max_length=50)
 
     def __str__(self):
-        return str(self.pk) + ' ' + self.year_level
+        return self.year_level
 
 
 class StudentClassification(models.Model):
@@ -69,6 +71,7 @@ class StudentPersonalInformation(models.Model):
     where_hear_us = models.ForeignKey(WhereDidYouHearUs, default=1, on_delete=models.SET_DEFAULT)
     why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
     connectivity = models.CharField(max_length=255, default="limited connectivity")
+    date_registered = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name
