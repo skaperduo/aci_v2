@@ -1,5 +1,5 @@
 from django.contrib import admin
-from import_export.admin import ImportExportActionModelAdmin
+# from import_export.admin import ImportExportActionModelAdmin
 from .models import Programs, SHSstrands, PreferredShift, YearLevel, GradeLevel, StudentClassification,\
     StudentPersonalInformation, SeniorHighSchool_StudentPersonalInformation, JuniorHighSchool_StudentPersonalInformation,\
     Elementary_StudentPersonalInformation, WhereDidYouHearUs, WhyDidYouChooseUs, SchoolYear
@@ -32,26 +32,29 @@ class school_year(admin.ModelAdmin):
     list_display = ('school_year', 'sy_status')
 
 
-@admin.register(StudentPersonalInformation)
-class SPIAdminPanel(ImportExportActionModelAdmin, SPIAdmin):
-    pass
+# @admin.register(StudentPersonalInformation)
+# class SPIAdminPanel(ImportExportActionModelAdmin, SPIAdmin):
+#     pass
+#
+#
+# @admin.register(SeniorHighSchool_StudentPersonalInformation)
+# class SHS_SPIAdminPanel(ImportExportActionModelAdmin, SHS_SPIAdmin):
+#     pass
+#
+#
+# @admin.register(JuniorHighSchool_StudentPersonalInformation)
+# class JHS_SPIAdminPanel(ImportExportActionModelAdmin, JHS_SPIAdmin):
+#     pass
+#
+#
+# @admin.register(Elementary_StudentPersonalInformation)
+# class E_SPIAdminPanel(ImportExportActionModelAdmin, E_SPIAdmin):
+#     pass
 
-
-@admin.register(SeniorHighSchool_StudentPersonalInformation)
-class SHS_SPIAdminPanel(ImportExportActionModelAdmin, SHS_SPIAdmin):
-    pass
-
-
-@admin.register(JuniorHighSchool_StudentPersonalInformation)
-class JHS_SPIAdminPanel(ImportExportActionModelAdmin, JHS_SPIAdmin):
-    pass
-
-
-@admin.register(Elementary_StudentPersonalInformation)
-class E_SPIAdminPanel(ImportExportActionModelAdmin, E_SPIAdmin):
-    pass
-
-
+admin.site.register(StudentPersonalInformation, SPIAdmin)
+admin.site.register(SeniorHighSchool_StudentPersonalInformation, SHS_SPIAdmin)
+admin.site.register(JuniorHighSchool_StudentPersonalInformation, JHS_SPIAdmin)
+admin.site.register(Elementary_StudentPersonalInformation, E_SPIAdmin)
 admin.site.register(Programs)
 admin.site.register(PreferredShift)
 admin.site.register(YearLevel)
@@ -60,11 +63,11 @@ admin.site.register(GradeLevel)
 admin.site.register(StudentClassification)
 admin.site.register(WhereDidYouHearUs)
 admin.site.register(WhyDidYouChooseUs)
+admin.site.register(SchoolYear, school_year)
 
-
-@admin.register(SchoolYear)
-class SchoolYear(school_year):
-    pass
+# @admin.register(SchoolYear)
+# class SchoolYear(school_year):
+#     pass
 
 
 # Register your models here.
