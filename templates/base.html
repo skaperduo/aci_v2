@@ -68,12 +68,27 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" role="button">
-                        Admission
+                        College Admission
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'admission_requirements' %}">Admission Requirements</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{% url 'admission' %}">Online Pre-registration</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" role="button">
+                        Basic Education Admission
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'basic_ed_admission_requirements' %}">Admission Requirements</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'shs_admission' %}">SHS Online Pre-registration</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'jhs_admission' %}">JHS Online Pre-registration</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'elementary_admission' %}">Elementary Online Pre-registration</a>
                     </div>
                 </li>
 

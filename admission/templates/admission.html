@@ -3,7 +3,7 @@
 <br>
 <div class="container">
 <center>
-    <h1>ONLINE PRE-REGISTRATION FORM</h1>
+    <h1>College Online Pre-registration Form</h1>
 </center>
 <br>
 
@@ -93,6 +93,21 @@
         <lable>Student Classification and Preference</lable>
     </b>
     <hr>
+
+    <div class="input-group input-group-sm mb-3" style="width: 200px;">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">School Year</span>
+        </div>
+        {% for sy in school_year %}
+            {% if sy.sy_status == 'active' %}
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-sm" value="{{ sy.pk }}" name="stud_school_year" hidden>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-sm" value="{{ sy }}" readonly>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <br>
 
     <div class="row justify-content-center">
     <div class="radio">

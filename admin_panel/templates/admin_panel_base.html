@@ -33,6 +33,20 @@
         <a class="navbar-brand" href="{% url 'admin_panel' %}">Agusan Colleges, Inc.</a>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'logout' %}">Undergraduate/Graduate<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'logout' %}">Senior High School<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'logout' %}">Junior High School<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'logout' %}">Elementary<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
                     {% if user.is_authenticated %}

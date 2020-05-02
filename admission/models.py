@@ -7,10 +7,16 @@ from datetime import datetime, date
 
 class Programs(models.Model):
     program_title = models.CharField(max_length=255)
-    program_description = models.TextField
 
     def __str__(self):
         return self.program_title
+
+
+class SHSstrands(models.Model):
+    strand_title = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.strand_title
 
 
 class PreferredShift(models.Model):
@@ -26,6 +32,13 @@ class YearLevel(models.Model):
 
     def __str__(self):
         return self.year_level
+
+
+class GradeLevel(models.Model):
+    grade_level = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.grade_level
 
 
 class StudentClassification(models.Model):
@@ -47,6 +60,14 @@ class WhyDidYouChooseUs(models.Model):
 
     def __str__(self):
         return self.why
+
+
+class SchoolYear(models.Model):
+    school_year = models.CharField(max_length=255)
+    sy_status = models.CharField(max_length=255, default="active")
+
+    def __str__(self):
+        return self.school_year
 
 
 class StudentPersonalInformation(models.Model):
@@ -71,12 +92,91 @@ class StudentPersonalInformation(models.Model):
     where_hear_us = models.ForeignKey(WhereDidYouHearUs, default=1, on_delete=models.SET_DEFAULT)
     why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
     connectivity = models.CharField(max_length=255, default="limited connectivity")
+    stud_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
     date_registered = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name
 
 
+class SeniorHighSchool_StudentPersonalInformation(models.Model):
+    shs_last_name = models.CharField(max_length=255)
+    shs_first_name = models.CharField(max_length=255)
+    shs_middle_name = models.CharField(max_length=255)
+    shs_birthdate = models.CharField(max_length=255)
+    shs_birth_place = models.CharField(max_length=255)
+    shs_religion = models.CharField(max_length=255, blank=True)
+    shs_nationality = models.CharField(max_length=255)
+    shs_gender = models.CharField(max_length=255)
+    shs_civil_status = models.CharField(max_length=255)
+    shs_email_address = models.CharField(max_length=255)
+    shs_social_media_accounts = models.CharField(max_length=255, blank=True)
+    shs_mobile_number = models.CharField(max_length=255)
+    shs_landline_number = models.CharField(max_length=255,blank=True)
+    shs_home_address = models.CharField(max_length=255)
+    shs_stud_classification = models.ForeignKey(StudentClassification, default=1, on_delete=models.SET_DEFAULT)
+    shs_stud_grade_level = models.ForeignKey(GradeLevel, default=1, on_delete=models.SET_DEFAULT)
+    shs_stud_strand = models.ForeignKey(SHSstrands, default=1, on_delete=models.SET_DEFAULT)
+    where_hear_us = models.ForeignKey(WhereDidYouHearUs, default=1, on_delete=models.SET_DEFAULT)
+    why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
+    connectivity = models.CharField(max_length=255, default="limited connectivity")
+    shs_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
+    shs_date_registered = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.pk) + ' ' + self.shs_last_name + ', ' + self.shs_first_name + ' ' + self.shs_middle_name
 
 
+class JuniorHighSchool_StudentPersonalInformation(models.Model):
+    jhs_last_name = models.CharField(max_length=255)
+    jhs_first_name = models.CharField(max_length=255)
+    jhs_middle_name = models.CharField(max_length=255)
+    jhs_birthdate = models.CharField(max_length=255)
+    jhs_birth_place = models.CharField(max_length=255)
+    jhs_religion = models.CharField(max_length=255, blank=True)
+    jhs_nationality = models.CharField(max_length=255)
+    jhs_gender = models.CharField(max_length=255)
+    jhs_civil_status = models.CharField(max_length=255)
+    jhs_email_address = models.CharField(max_length=255)
+    jhs_social_media_accounts = models.CharField(max_length=255, blank=True)
+    jhs_mobile_number = models.CharField(max_length=255)
+    jhs_landline_number = models.CharField(max_length=255,blank=True)
+    jhs_home_address = models.CharField(max_length=255)
+    jhs_stud_classification = models.ForeignKey(StudentClassification, default=1, on_delete=models.SET_DEFAULT)
+    jhs_stud_grade_level = models.ForeignKey(GradeLevel, default=1, on_delete=models.SET_DEFAULT)
+    where_hear_us = models.ForeignKey(WhereDidYouHearUs, default=1, on_delete=models.SET_DEFAULT)
+    why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
+    connectivity = models.CharField(max_length=255, default="limited connectivity")
+    jhs_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
+    jhs_date_registered = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.pk) + ' ' + self.jhs_last_name + ', ' + self.jhs_first_name + ' ' + self.jhs_middle_name
+
+
+class Elementary_StudentPersonalInformation(models.Model):
+    elementary_last_name = models.CharField(max_length=255)
+    elementary_first_name = models.CharField(max_length=255)
+    elementary_middle_name = models.CharField(max_length=255)
+    elementary_birthdate = models.CharField(max_length=255)
+    elementary_birth_place = models.CharField(max_length=255)
+    elementary_religion = models.CharField(max_length=255, blank=True)
+    elementary_nationality = models.CharField(max_length=255)
+    elementary_gender = models.CharField(max_length=255)
+    elementary_civil_status = models.CharField(max_length=255)
+    elementary_email_address = models.CharField(max_length=255)
+    elementary_social_media_accounts = models.CharField(max_length=255, blank=True)
+    elementary_mobile_number = models.CharField(max_length=255)
+    elementary_landline_number = models.CharField(max_length=255,blank=True)
+    elementary_home_address = models.CharField(max_length=255)
+    elementary_stud_classification = models.ForeignKey(StudentClassification, default=1, on_delete=models.SET_DEFAULT)
+    elementary_stud_grade_level = models.ForeignKey(GradeLevel, default=1, on_delete=models.SET_DEFAULT)
+    where_hear_us = models.ForeignKey(WhereDidYouHearUs, default=1, on_delete=models.SET_DEFAULT)
+    why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
+    connectivity = models.CharField(max_length=255, default="limited connectivity")
+    elem_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
+    elementary_date_registered = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.pk) + ' ' + self.elementary_last_name + ', ' + self.elementary_first_name + ' ' + self.elementary_middle_name
 
