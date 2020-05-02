@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aciWebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aciWebsite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/first_names_2.133e98d79d52.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/first_names_2.133e98d79d52.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/first_names_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/first_names_2.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/import_export/action_formats.11c3e817b80a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/import_export/action_formats.11c3e817b80a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/import_export/action_formats.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/import_export/action_formats.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/import_export/import.358144dd8713.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/import_export/import.358144dd8713.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/import_export/import.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/import_export/import.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/last_names.133e98d79d52.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/last_names.133e98d79d52.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/last_names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/last_names.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/middle_names.133e98d79d52.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/middle_names.133e98d79d52.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/middle_names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/middle_names.txt.gz" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
