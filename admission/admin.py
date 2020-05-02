@@ -11,7 +11,7 @@ class SPIAdmin(admin.ModelAdmin):
 
 
 class SHS_SPIAdmin(admin.ModelAdmin):
-    list_display = ('shs_last_name', 'shs_first_name', 'shs_middle_name', 'shs_stud_rade_level', 'shs_stud_strand',
+    list_display = ('shs_last_name', 'shs_first_name', 'shs_middle_name', 'shs_stud_grade_level', 'shs_stud_strand',
                     'connectivity', 'shs_date_registered')
     list_filter = ('shs_stud_grade_level', 'shs_stud_strand', 'connectivity', 'shs_date_registered')
 
