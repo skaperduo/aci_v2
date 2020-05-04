@@ -29,8 +29,8 @@ SECRET_KEY = '&+^v6$7v+f44q_+t1yfep#p0dnoi1o0zl0x#*908@k$#0csslq'
 # DEBUG = True
 DEBUG = True
 
-# ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -155,7 +155,7 @@ EMAIL_PORT = 587
 LOGIN_REDIRECT_URL = 'admin_panel'
 
 
-# Heroku: Update database configuration from $DATABASE_URL.
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# # Heroku: Update database configuration from $DATABASE_URL.
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
