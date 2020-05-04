@@ -12,11 +12,40 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 
 import os
+import django_heroku
 import dj_database_url
+import dotenv
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+# This is new:
+# dotenv_file = os.path.join(BASE_DIR, ".env")
+# if os.path.isfile(dotenv_file):
+#     dotenv.load_dotenv(dotenv_file)
+
+
+DOTENV_FILE = os.path.join(BASE_DIR, ".env")
+ENV = False
+
+if os.path.isfile(DOTENV_FILE):
+    ENV = True
+if ENV:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': dotenv.get_key(DOTENV_FILE, 'DB_NAME'),
+            'USER': dotenv.get_key(DOTENV_FILE, 'DB_USER'),
+            'PASSWORD': dotenv.get_key(DOTENV_FILE, 'DB_PASSWORD'),
+            'HOST': dotenv.get_key(DOTENV_FILE, 'DB_HOST'),
+            'PORT': dotenv.get_key(DOTENV_FILE, 'DB_PORT')
+        }
+    }
+else:
+    DATABASES = dict()
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,8 +58,8 @@ SECRET_KEY = '&+^v6$7v+f44q_+t1yfep#p0dnoi1o0zl0x#*908@k$#0csslq'
 # DEBUG = True
 DEBUG = True
 
-ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -87,12 +116,16 @@ WSGI_APPLICATION = 'aciWebsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+
+# DATABASES = {}
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 # Password validation
@@ -159,3 +192,9 @@ LOGIN_REDIRECT_URL = 'admin_panel'
 # db_from_env = dj_database_url.config(conn_max_age=500)
 # DATABASES['default'].update(db_from_env)
 
+# This should already be in your settings.py
+django_heroku.settings(locals())
+# This is new
+# del DATABASES['default']['OPTIONS']['sslmode']
+if not ENV:
+    del DATABASES['default']['OPTIONS']['sslmode']
