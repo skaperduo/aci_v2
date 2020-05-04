@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 
 import os
+import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,10 +27,10 @@ SECRET_KEY = '&+^v6$7v+f44q_+t1yfep#p0dnoi1o0zl0x#*908@k$#0csslq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -130,6 +131,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
@@ -151,4 +153,9 @@ EMAIL_HOST_PASSWORD = 'admin1951'
 EMAIL_PORT = 587
 
 LOGIN_REDIRECT_URL = 'admin_panel'
+
+
+# Heroku: Update database configuration from $DATABASE_URL.
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 

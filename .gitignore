@@ -55,6 +55,12 @@ cover/
 *.mo
 *.pot
 
+# Text backup files
+*.bak
+
+# Database
+*.sqlite3
+
 # Django stuff:
 *.log
 local_settings.py
