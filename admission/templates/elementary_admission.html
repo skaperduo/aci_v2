@@ -129,7 +129,7 @@
                     <label class="input-group-text"><span class="required">*</span>Grade Level</label>
                 </div>
                 <select class="custom-select"  name="elementary_stud_grade_level" required>
-                    <option selected>Choose...</option>
+                    <option value="" selected>Choose...</option>
                     {% for gradelevel in grade_level|slice:"0:6" %}
                     <option value="{{ gradelevel.pk }}">{{ gradelevel.grade_level }}</option>
                     {% endfor %}
@@ -205,8 +205,14 @@
         </div>
         <div class="col-6">
             <div class="form-group">
-                <label><span class="required">*</span>Civil Status</label>
-                <input type="text" class="form-control" name="elementary_civil_status" required>
+                <label for="exampleFormControlSelect1">Civil Status</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="elementary_civil_status" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Separated">Separated</option>
+                </select>
             </div>
         </div>
     </div>
@@ -215,7 +221,7 @@
         <div class="col-6">
             <div class="form-group">
                 <label><span class="required">*</span>Email Address</label>
-                <input type="text" class="form-control" name="elementary_email_address" required>
+                <input type="email" class="form-control" name="elementary_email_address" required>
             </div>
         </div>
         <div class="col-6">
@@ -230,7 +236,7 @@
         <div class="col-6">
             <div class="form-group">
                 <label><span class="required">*</span>Mobile Number</label>
-                <input type="text" class="form-control" name="elementary_mobile_number" required>
+                <input type="number" max="9999999999" class="form-control" name="elementary_mobile_number" required>
             </div>
         </div>
         <div class="col-6">

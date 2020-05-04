@@ -127,7 +127,7 @@
                     <label class="input-group-text"><span class="required">*</span>Program</label>
                 </div>
                 <select class="custom-select"  name="stud_program" required>
-                    <option selected>Choose...</option>
+                    <option value="" selected>Choose...</option>
                     {% for prog in programs %}
                     <option value="{{ prog.pk }}">{{ prog.program_title }}</option>
                     {% endfor %}
@@ -141,7 +141,7 @@
                     <label class="input-group-text"><span class="required">*</span>Year Level</label>
                 </div>
                 <select class="custom-select"  name="stud_year_level" required>
-                    <option selected>Choose...</option>
+                    <option value="" selected>Choose...</option>
                     {% for yearlevel in year_level %}
                     <option value="{{ yearlevel.pk}}">{{ yearlevel.year_level}}</option>
                     {% endfor %}
@@ -155,7 +155,7 @@
                     <label class="input-group-text"><span class="required">*</span>Preferred Shift</label>
                 </div>
                 <select class="custom-select" name="stud_shift" required>
-                    <option selected>Choose...</option>
+                    <option value="" selected>Choose...</option>
                     {% for shift in shifts %}
                     <option name="stud_shift"  value="{{ shift.pk}}">{{ shift.shift_title}} : {{ shift.shift_time}}</option>
                     {% endfor %}
@@ -229,9 +229,19 @@
             </div>
         </div>
         <div class="col-6">
+<!--            <div class="form-group">-->
+<!--                <label><span class="required">*</span>Civil Status</label>-->
+<!--                <input type="text" class="form-control" name="civil_status" required>-->
+<!--            </div>-->
             <div class="form-group">
-                <label><span class="required">*</span>Civil Status</label>
-                <input type="text" class="form-control" name="civil_status" required>
+                <label for="exampleFormControlSelect1">Civil Status</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="civil_status" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Separated">Separated</option>
+                </select>
             </div>
         </div>
     </div>
@@ -240,7 +250,7 @@
         <div class="col-6">
             <div class="form-group">
                 <label><span class="required">*</span>Email Address</label>
-                <input type="text" class="form-control" name="email_address" required>
+                <input type="email" class="form-control" name="email_address" required>
             </div>
         </div>
         <div class="col-6">
@@ -255,7 +265,7 @@
         <div class="col-6">
             <div class="form-group">
                 <label><span class="required">*</span>Mobile Number</label>
-                <input type="text" class="form-control" name="mobile_number" required>
+                <input type="number" max="9999999999" class="form-control" name="mobile_number" required>
             </div>
         </div>
         <div class="col-6">
