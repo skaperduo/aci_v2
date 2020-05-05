@@ -65,13 +65,12 @@ nav .nav-link {
 /* Pre-reg Icon */
 
 .pre_reg_icon {
-    top: 50%;
-    right: 0;
+    top: 40%;
+    right: 15px;
     background-color: #1e2736;
     width: 180px;
     position: fixed;
     z-index: 9999;
-    padding: initial;
     opacity: .95;
 }
 
