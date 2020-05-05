@@ -61,3 +61,43 @@ nav .nav-link {
 .programs ul li{
     list-style: none;
 }
+
+/* Pre-reg Icon */
+
+.pre_reg_icon {
+    top: 50%;
+    right: 0;
+    background-color: #1e2736;
+    width: 180px;
+    position: fixed;
+    z-index: 9999;
+    padding: initial;
+    opacity: .95;
+}
+
+.pre_reg_icon:hover {
+    padding-right: 30px;
+    width: 210px;
+    transition: 1s;
+}
+
+.pre_reg_icon label{
+    color: #fff;
+    font-size: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.pre_reg_icon a {
+    height: 100%;
+    width: 100%px;
+    list-style-type: none;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+

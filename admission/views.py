@@ -206,3 +206,7 @@ def elementary_admission(request):
             'school_year': school_year
         })
 
+
+def pre_reg_landing_page(request):
+    return render(request, 'pre_reg_landing_page.html', {})
+
