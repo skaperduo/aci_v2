@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about_us/templates/about_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about_us/templates/about_us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/elementary_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/elementary_admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/jhs_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/jhs_admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/shs_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/shs_admission.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homepage/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/grad_basic.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/grad_basic.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/grad_basic.psd" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/grad_basic.psd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -108,10 +105,10 @@
     </state>
     <state x="259" y="9" key="SettingsEditor/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588573698367" />
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587708757297" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1588655590123">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1588740869939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588655590123" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588740869939" />
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-306.1920.1040@0.0.1366.728" timestamp="1587725120095" />
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587704392233" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588561627213" />
