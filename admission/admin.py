@@ -2,7 +2,7 @@ from django.contrib import admin
 from import_export.admin import ImportExportActionModelAdmin
 from .models import Programs, SHSstrands, PreferredShift, YearLevel, GradeLevel, StudentClassification,\
     StudentPersonalInformation, SeniorHighSchool_StudentPersonalInformation, JuniorHighSchool_StudentPersonalInformation,\
-    Elementary_StudentPersonalInformation, WhereDidYouHearUs, WhyDidYouChooseUs, SchoolYear
+    Elementary_StudentPersonalInformation, WhereDidYouHearUs, WhyDidYouChooseUs, SchoolYear, Appointment_Dates, Admission_Appointments
 
 
 class SPIAdmin(admin.ModelAdmin):
@@ -66,6 +66,8 @@ admin.site.register(StudentClassification)
 admin.site.register(WhereDidYouHearUs)
 admin.site.register(WhyDidYouChooseUs)
 # admin.site.register(SchoolYear, school_year)
+admin.site.register(Appointment_Dates)
+admin.site.register(Admission_Appointments)
 
 
 @admin.register(SchoolYear)

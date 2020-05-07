@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/grad_basic.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/grad_basic.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/grad_basic.psd" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/grad_basic.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/templates/admin_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_panel/templates/admin_panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin_panel/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/templates/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -105,10 +109,10 @@
     </state>
     <state x="259" y="9" key="SettingsEditor/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588573698367" />
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587708757297" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1588740869939">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1588831253726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588740869939" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588831253726" />
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-306.1920.1040@0.0.1366.728" timestamp="1587725120095" />
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587704392233" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588561627213" />
@@ -119,10 +123,10 @@
     </state>
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588155010293" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587677612264" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588227553621">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588771737054">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588227553621" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588771737054" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.316.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587428648163" />
   </component>
 </project>

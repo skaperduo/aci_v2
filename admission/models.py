@@ -94,6 +94,7 @@ class StudentPersonalInformation(models.Model):
     connectivity = models.CharField(max_length=255, default="limited connectivity")
     stud_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
     date_registered = models.DateField(auto_now_add=True)
+    export_to_CSV = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name
@@ -180,3 +181,19 @@ class Elementary_StudentPersonalInformation(models.Model):
     def __str__(self):
         return str(self.pk) + ' ' + self.elementary_last_name + ', ' + self.elementary_first_name + ' ' + self.elementary_middle_name
 
+
+class Appointment_Dates(models.Model):
+    appointment_date = models.DateField(blank=True)
+    appointment_status = models.CharField(max_length=8, default="inactive")
+    appointment_count = models.IntegerField(default=50)
+
+    def __str__(self):
+        return str(self.pk) + ' ' + str(self.appointment_date) + ' ' + self.appointment_status + ' ' + str(self.appointment_count)
+
+
+class Admission_Appointments(models.Model):
+    student_id = models.ForeignKey(StudentPersonalInformation, default=1, on_delete=models.SET_DEFAULT)
+    appointment_date_id = models.ForeignKey(Appointment_Dates, default=1, on_delete=models.SET_DEFAULT)
+
+    def __str__(self):
+        return str(self.student_id) + ' ' + str(self.appointment_date_id)

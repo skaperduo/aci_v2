@@ -30,6 +30,7 @@ class StudentPersonalInformationForm(forms.ModelForm):
                   'why_choose_us',
                   'connectivity',
                   'stud_school_year',
+                  'export_to_CSV',
                   ]
 
 

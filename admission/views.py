@@ -44,7 +44,8 @@ def admission(request):
             form.save()
             subject = "ACI Online Pre-registration Confirmation"
             message = "Thank you for Pre-registering to ACI \n " \
-                      "Looking forward to seeing you in ACI Campus! \n God bless.."
+                      "Looking forward to seeing you in ACI Campus! \n \n" \
+                      "Next step:"
             from_email = 'aciunofficial@gmail.com'
             email = form['email_address'].value()
             to_list = [email, settings.EMAIL_HOST_USER]
