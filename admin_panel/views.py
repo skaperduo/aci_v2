@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q, Count, F
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 from admission.forms import StudentPersonalInformationForm, SHS_StudentPersonalInformationForm,\
     JHS_StudentPersonalInformationForm, ELEM_StudentPersonalInformationForm
@@ -21,6 +22,7 @@ def is_valid_queryparam(param):
     return param != '' and param is not None
 
 
+@login_required
 def admin_panel(request):
     count = request.GET.get('count')
 

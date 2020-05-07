@@ -9,14 +9,12 @@
         </div>
         <div class="col-sm">
             <center><h1>User's Login</h1>
-                                {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                    {{ message }}
-                </div>
-                {% endfor %}
-                {% endif %}
+
+            {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+            {% endif %}
                 <hr>
+
             </center>
             <form method="POST">{% csrf_token %}
                 <div class="form-group">

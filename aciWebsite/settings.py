@@ -187,7 +187,7 @@ EMAIL_HOST_PASSWORD = 'admin1951'
 EMAIL_PORT = 587
 
 LOGIN_REDIRECT_URL = 'admin_panel'
-
+LOGIN_URL = 'login'
 
 # # Heroku: Update database configuration from $DATABASE_URL.
 # db_from_env = dj_database_url.config(conn_max_age=500)
