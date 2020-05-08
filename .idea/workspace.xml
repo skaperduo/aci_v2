@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/admission.html" afterDir="false" />
-    </list>
+    <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
