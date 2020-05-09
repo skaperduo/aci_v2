@@ -73,6 +73,12 @@
                     C. Academic Linkages such as review centers and business partners who help students provide job
                     opportunities after graduation.<br>
                     </p>
+                    <p>
+                        <b>Safety and Security:</b><br>
+                        <hr>
+                    ACI is committed to protect personal data through proper administrative and security measures. Only authorized
+                    personel will have access to data collected.
+                    </p>
                 </div>
                 <br>
 
@@ -85,9 +91,9 @@
 
     <p>
         <b>Instruction</b><br>
-        (1) Please Supply all information required.<br>
-        (2) Leave it BLANK if the information asked is not applicable to you.<br>
-        <b>Note</b>: Fields marked with (*) are required.
+        (1) Fill in all necessary information below.<br>
+        (2) Leave it BLANK if the information is not applicable to you.<br>
+        <b>Note</b>: Fields marked with (<span class="required" style="color: red;">*</span>) are required.
     </p>
 
     <form method="POST" action="{% url 'elementary_admission' %}"> {% csrf_token %}
@@ -133,11 +139,11 @@
                 <div class="col-sm">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text"><span class="required">*</span>Grade Level</label>
+                            <label class="input-group-text"><span class="required" style="color: red;">*</span>Grade Level</label>
                         </div>
                         <select class="custom-select" name="elementary_stud_grade_level" required>
                             <option value="" selected>Choose...</option>
-                            {% for gradelevel in grade_level|slice:"0:6" %}
+                            {% for gradelevel in grade_level|slice:"0:8" %}
                             <option value="{{ gradelevel.pk }}">{{ gradelevel.grade_level }}</option>
                             {% endfor %}
                         </select>
@@ -154,19 +160,19 @@
         <div class="row justify-content-center">
             <div class="col-sm">
                 <div class="form-group">
-                    <label><span class="required">*</span>Last Name</label>
+                    <label><span class="required" style="color: red;">*</span>Last Name</label>
                     <input type="text" class="form-control" name="elementary_last_name" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
-                    <label><span class="required">*</span>First Name</label>
+                    <label><span class="required" style="color: red;">*</span>First Name</label>
                     <input type="text" class="form-control" name="elementary_first_name" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
-                    <label><span class="required">*</span>Middle Name</label>
+                    <label><span class="required" style="color: red;">*</span>Middle Name</label>
                     <input type="text" class="form-control" name="elementary_middle_name" required>
                 </div>
             </div>
@@ -175,13 +181,13 @@
         <div class="row justify-content-center">
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label><span class="required">*</span>Birthdate</label>
+                    <label><span class="required" style="color: red;">*</span>Birthdate</label>
                     <input type="date" class="form-control" name="elementary_birthdate" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
-                    <label><span class="required">*</span>Birth Place</label>
+                    <label><span class="required" style="color: red;">*</span>Birth Place</label>
                     <input type="text" class="form-control" name="elementary_birth_place" required>
                 </div>
             </div>
@@ -196,7 +202,7 @@
             </div>
             <div class="col-sm">
                 <div class="form-group">
-                    <label><span class="required">*</span>Nationality</label>
+                    <label><span class="required" style="color: red;">*</span>Nationality</label>
                     <input type="text" class="form-control" name="elementary_nationality" required>
                 </div>
             </div>
@@ -205,13 +211,13 @@
         <div class="row justify-content-center">
             <div class="col-sm">
                 <div class="form-group">
-                    <label><span class="required">*</span>Gender</label>
+                    <label><span class="required" style="color: red;">*</span>Gender</label>
                     <input type="text" class="form-control" name="elementary_gender" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Civil Status</label>
+                    <label for="exampleFormControlSelect1"><span class="required" style="color: red;">*</span>Civil Status</label>
                     <select class="form-control" id="exampleFormControlSelect1" name="elementary_civil_status" required>
                         <option value="" selected>Choose...</option>
                         <option value="Single">Single</option>
@@ -226,7 +232,7 @@
         <div class="row justify-content-center">
             <div class="col-sm">
                 <div class="form-group">
-                    <label><span class="required">*</span>Email Address</label>
+                    <label><span class="required" style="color: red;">*</span>Email Address</label>
                     <input type="email" class="form-control" name="elementary_email_address" required>
                 </div>
             </div>
@@ -241,14 +247,14 @@
         <div class="row justify-content-center">
             <div class="col-sm">
                 <div class="form-group">
-                    <label><span class="required">*</span>Mobile Number</label>
-                    <input type="number" max="9999999999" class="form-control" name="elementary_mobile_number" required>
+                    <label><span class="required" style="color: red;">*</span>Mobile Number</label>
+                    <input type="text" class="form-control" name="elementary_mobile_number" value="+63" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label>Residence Landline Number</label>
-                    <input type="text" class="form-control" name="elementary_landline_number">
+                    <input type="text" class="form-control" name="elementary_landline_number" value="085 ">
                 </div>
             </div>
         </div>
@@ -256,18 +262,12 @@
         <div class="row">
             <div class="col-sm">
                 <div class="form-group">
-                    <label><span class="required">*</span>Home Address</label>
+                    <label><span class="required" style="color: red;">*</span>Home Address</label>
                     <input type="text" class="form-control" name="elementary_home_address" required>
                 </div>
             </div>
         </div>
 
-        <hr>
-        <b>
-            <center>
-                <lable>Survey</lable>
-            </center>
-        </b>
         <hr>
 
         <div class="row justify-content-center">
@@ -293,7 +293,7 @@
             <div class="col-sm-10">
                 <div class="card" style="width: auto;">
                     <div class="card-body">
-                        <h5 class="card-title">Why did you prefer to choose ACI?</h5>
+                        <h5 class="card-title">Why did you choose ACI?</h5>
                         <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
                         <div class="form-check">
                             {% for wy in why %}
@@ -312,23 +312,23 @@
             <div class="col-sm-10">
                 <div class="card" style="width: auto;">
                     <div class="card-body">
-                        <h5 class="card-title"><span class="required">*</span>Connectivity Capacity</h5>
+                        <h5 class="card-title"><span class="required" style="color: red;">*</span>Connectivity Capacity</h5>
                         <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="connectivity"
                                    value="without connectivity" required>
                             <label class="form-check-label">
-                                Without Connectivity (no gadget, no internet connection)
+                                Without Connectivity (no internet connection)
                             </label><br>
                             <input class="form-check-input" type="radio" name="connectivity"
                                    value="limited connectivity" required>
                             <label class="form-check-label">
-                                With Limited Connectivity (with gadget, but with limited internet connection)
+                                With Limited Connectivity (with limited internet connection)
                             </label><br>
                             <input class="form-check-input" type="radio" name="connectivity" value="with connectivity"
                                    required>
                             <label class="form-check-label">
-                                With Connectivity (with gadget, with internet connection)
+                                With Connectivity (with internet connection)
                             </label>
                         </div>
                     </div>

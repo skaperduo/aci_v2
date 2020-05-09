@@ -2,6 +2,7 @@ from django.conf import settings
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
+from django.contrib.auth.decorators import permission_required
 from .models import Programs, SHSstrands, PreferredShift, YearLevel, GradeLevel, StudentClassification,\
     StudentPersonalInformation, SeniorHighSchool_StudentPersonalInformation, JuniorHighSchool_StudentPersonalInformation,\
     Elementary_StudentPersonalInformation, WhereDidYouHearUs, WhyDidYouChooseUs, SchoolYear

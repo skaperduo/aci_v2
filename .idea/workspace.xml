@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="" />
+    <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_us/templates/about_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about_us/templates/about_us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/templates/admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/admission.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/templates/admission_requirements.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/admission_requirements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/templates/basic_ed_admission_requirements.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/basic_ed_admission_requirements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/templates/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/templates/elementary_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/elementary_admission.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/templates/jhs_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/jhs_admission.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/templates/shs_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/shs_admission.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programs/templates/program_bsais.html" beforeDir="false" afterPath="$PROJECT_DIR$/programs/templates/program_bsais.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programs/templates/program_bsba.html" beforeDir="false" afterPath="$PROJECT_DIR$/programs/templates/program_bsba.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programs/templates/program_bsit.html" beforeDir="false" afterPath="$PROJECT_DIR$/programs/templates/program_bsit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/main.442e469157b0.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/main.442e469157b0.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,10 +98,10 @@
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587880043361" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587677782273" />
-    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588157822456">
+    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589019811272">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588157822456" />
+    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1589019811272" />
     <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.316.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587420065132" />
     <state x="614" y="106" key="CommitChangelistDialog2" timestamp="1588155025743">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -100,10 +117,10 @@
     </state>
     <state x="259" y="9" key="SettingsEditor/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588573698367" />
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587708757297" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1588835352018">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1589017223082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1588835352018" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1589017223082" />
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-306.1920.1040@0.0.1366.728" timestamp="1587725120095" />
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587704392233" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588561627213" />
