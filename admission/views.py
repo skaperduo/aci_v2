@@ -56,7 +56,7 @@ def admission(request):
             form.save()
             subject = "ACI Online Pre-registration Confirmation"
             message = "Dear " + last_name + ", " + first_name + " " + middle_name + \
-                      " Welcome to ACI \n " \
+                      "\nWelcome to ACI \n " \
                       "We are delighted to received your application. \n \n" \
                       "Your registration is confirmed and complete!"
             from_email = 'aciunofficial@gmail.com'
@@ -116,25 +116,28 @@ def shs_admission(request):
     if request.method == "POST":
         form = SHS_StudentPersonalInformationForm(request.POST or None)
 
+        shs_last_name = request.POST.get('shs_last_name')
+        shs_first_name = request.POST.get('shs_first_name')
+        shs_middle_name = request.POST.get('shs_middle_name')
+
         if form.is_valid():
             form.save()
             subject = "ACI Online Pre-registration Confirmation"
-            message = "Thank you for Pre-registering to ACI \n " \
-                      "Looking forward to seeing you in ACI Campus! \n God bless.."
+            message = "Dear " + shs_last_name + ", " + shs_first_name + " " + shs_middle_name + \
+                      "\nWelcome to ACI \n " \
+                      "We are delighted to received your application. \n \n" \
+                      "Your registration is confirmed and complete!"
             from_email = 'aciunofficial@gmail.com'
             email = form['shs_email_address'].value()
             to_list = [email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        return redirect('confirm')
-        # return render(request, 'admission.html', {
-        #     'programs': all_programs,
-        #     'shifts': all_shifts,
-        #     'year_level': all_year_level,
-        #     'classification': all_classification,
-        #     'where': all_where,
-        #     'why': all_why
-        # })
+        # return redirect('confirm')
+        return render(request, 'confirmation.html', {
+            'last_name': shs_last_name,
+            'first_name': shs_first_name,
+            'middle_name': shs_middle_name,
+        })
 
     else:
         return render(request, 'shs_admission.html', {
@@ -157,25 +160,28 @@ def jhs_admission(request):
     if request.method == "POST":
         form = JHS_StudentPersonalInformationForm(request.POST or None)
 
+        jhs_last_name = request.POST.get('jhs_last_name')
+        jhs_first_name = request.POST.get('jhs_first_name')
+        jhs_middle_name = request.POST.get('jhs_middle_name')
+
         if form.is_valid():
             form.save()
             subject = "ACI Online Pre-registration Confirmation"
-            message = "Thank you for Pre-registering to ACI \n " \
-                      "Looking forward to seeing you in ACI Campus! \n God bless.."
+            message = "Dear " + jhs_last_name + ", " + jhs_first_name + " " + jhs_middle_name + \
+                      "\nWelcome to ACI \n " \
+                      "We are delighted to received your application. \n \n" \
+                      "Your registration is confirmed and complete!"
             from_email = 'aciunofficial@gmail.com'
             email = form['jhs_email_address'].value()
             to_list = [email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        return redirect('confirm')
-        # return render(request, 'admission.html', {
-        #     'programs': all_programs,
-        #     'shifts': all_shifts,
-        #     'year_level': all_year_level,
-        #     'classification': all_classification,
-        #     'where': all_where,
-        #     'why': all_why
-        # })
+        # return redirect('confirm')
+        return render(request, 'confirmation.html', {
+            'last_name': jhs_last_name,
+            'first_name': jhs_first_name,
+            'middle_name': jhs_middle_name,
+        })
 
     else:
         return render(request, 'jhs_admission.html', {
@@ -197,25 +203,28 @@ def elementary_admission(request):
     if request.method == "POST":
         form = ELEM_StudentPersonalInformationForm(request.POST or None)
 
+        elementary_last_name = request.POST.get('elementary_last_name')
+        elementary_first_name = request.POST.get('elementary_first_name')
+        elementary_middle_name = request.POST.get('elementary_middle_name')
+
         if form.is_valid():
             form.save()
             subject = "ACI Online Pre-registration Confirmation"
-            message = "Thank you for Pre-registering to ACI \n " \
-                      "Looking forward to seeing you in ACI Campus! \n God bless.."
+            message = "Dear " + elementary_last_name + ", " + elementary_first_name + " " + elementary_middle_name + \
+                      "\nWelcome to ACI \n " \
+                      "We are delighted to received your application. \n \n" \
+                      "Your registration is confirmed and complete!"
             from_email = 'aciunofficial@gmail.com'
             email = form['elementary_email_address'].value()
             to_list = [email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        return redirect('confirm')
-        # return render(request, 'admission.html', {
-        #     'programs': all_programs,
-        #     'shifts': all_shifts,
-        #     'year_level': all_year_level,
-        #     'classification': all_classification,
-        #     'where': all_where,
-        #     'why': all_why
-        # })
+        # return redirect('confirm')
+        return render(request, 'confirmation.html', {
+            'last_name': elementary_last_name,
+            'first_name': elementary_first_name,
+            'middle_name': elementary_middle_name,
+        })
 
     else:
         return render(request, 'elementary_admission.html', {

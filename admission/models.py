@@ -99,6 +99,7 @@ class StudentPersonalInformation(models.Model):
 
     def __str__(self):
         return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name
+       # return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name + ' ' + self.stud_reference_no
 
 
 class SeniorHighSchool_StudentPersonalInformation(models.Model):
@@ -128,6 +129,7 @@ class SeniorHighSchool_StudentPersonalInformation(models.Model):
 
     def __str__(self):
         return str(self.pk) + ' ' + self.shs_last_name + ', ' + self.shs_first_name + ' ' + self.shs_middle_name
+        # return str(self.pk) + ' ' + self.shs_last_name + ', ' + self.shs_first_name + ' ' + self.shs_middle_name + ' ' + self.shs_reference_no
 
 
 class JuniorHighSchool_StudentPersonalInformation(models.Model):
@@ -156,6 +158,7 @@ class JuniorHighSchool_StudentPersonalInformation(models.Model):
 
     def __str__(self):
         return str(self.pk) + ' ' + self.jhs_last_name + ', ' + self.jhs_first_name + ' ' + self.jhs_middle_name
+        # return str(self.pk) + ' ' + self.jhs_last_name + ', ' + self.jhs_first_name + ' ' + self.jhs_middle_name + ' ' + self.jhs_reference_no
 
 
 class Elementary_StudentPersonalInformation(models.Model):
@@ -184,6 +187,7 @@ class Elementary_StudentPersonalInformation(models.Model):
 
     def __str__(self):
         return str(self.pk) + ' ' + self.elementary_last_name + ', ' + self.elementary_first_name + ' ' + self.elementary_middle_name
+        # return str(self.pk) + ' ' + self.elementary_last_name + ', ' + self.elementary_first_name + ' ' + self.elementary_middle_name + ' ' + self.elem_reference_no
 
 
 class Appointment_Dates(models.Model):
