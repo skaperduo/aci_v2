@@ -10,6 +10,8 @@ from .models import Programs, SHSstrands, PreferredShift, YearLevel, GradeLevel,
 from .forms import StudentPersonalInformationForm, SHS_StudentPersonalInformationForm,\
     JHS_StudentPersonalInformationForm, ELEM_StudentPersonalInformationForm
 
+import random
+
 
 # Create your views here.
 
@@ -41,26 +43,33 @@ def admission(request):
     if request.method == "POST":
         form = StudentPersonalInformationForm(request.POST or None)
 
+        last_name = request.POST.get('last_name')
+        first_name = request.POST.get('first_name')
+        middle_name = request.POST.get('middle_name')
+        # reference_no1 = random.randint(1, 99)
+        # reference_no2 = random.randint(1, 99)
+        #
+        # ref_no = f'ACI-{last_name[:2].upper()}{reference_no1}{first_name[:4].upper()}{reference_no2}'
+        # print(ref_no)
+
         if form.is_valid():
             form.save()
             subject = "ACI Online Pre-registration Confirmation"
-            message = "Thank you for Pre-registering to ACI \n " \
-                      "Looking forward to seeing you in ACI Campus! \n \n" \
-                      "Next step:"
+            message = "Dear " + last_name + ", " + first_name + " " + middle_name + \
+                      " Welcome to ACI \n " \
+                      "We are delighted to received your application. \n \n" \
+                      "Your registration is confirmed and complete!"
             from_email = 'aciunofficial@gmail.com'
             email = form['email_address'].value()
             to_list = [email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        return redirect('confirm')
-        # return render(request, 'admission.html', {
-        #     'programs': all_programs,
-        #     'shifts': all_shifts,
-        #     'year_level': all_year_level,
-        #     'classification': all_classification,
-        #     'where': all_where,
-        #     'why': all_why
-        # })
+        # return redirect('confirm')
+        return render(request, 'confirmation.html', {
+            'last_name': last_name,
+            'first_name': first_name,
+            'middle_name': middle_name,
+        })
 
     else:
         return render(request, 'admission.html', {
@@ -70,11 +79,20 @@ def admission(request):
             'classification': all_classification,
             'where': all_where,
             'why': all_why,
-            'school_year': school_year
+            'school_year': school_year,
         })
 
 
 def confirmation(request):
+
+    # reference_no1 = random.randint(1, 99)
+    # reference_no2 = random.randint(1, 99)
+    # reference_no3 = random.randint(1, 99)
+    # last = "Chanjueco"
+    # first = "Hamilcar"
+    # middle = "Bucong"
+    # print(f'ACI-{last[:2].upper()}{reference_no1}{first[:4].upper()}{reference_no2}')
+
     return render(request, 'confirmation.html', {})
 
 
