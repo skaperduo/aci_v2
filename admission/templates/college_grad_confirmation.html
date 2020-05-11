@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done {{ last_name }}, {{ first_name }} {{ middle_name }}!</h4>
+        <p>
+            An email is sent to your email address. {{ ref }}<br>
+            The email signifies that you have already pre-registered.
+        </p>
+        <hr>
+        <P>
+            Please wait for the text message came from Agusan College, Inc Personnel for your appointment date
+            to enroll.
+        </P>
+        <hr>
+        <p class="mb-0">Thank you for choosing ACI, We are looking forward to seeing you in our CAMPUS.</p>
+    </div>
+    <a class="btn btn-primary" href="{% url 'home' %}" role="button"> go back to ACI Homepage</a>
+</div>
+
+<br>
+{% endblock %}

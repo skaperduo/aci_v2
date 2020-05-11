@@ -10,4 +10,5 @@ urlpatterns = [
     path('junior_high_school_admission', views.jhs_admission, name="jhs_admission"),
     path('elementary_admission', views.elementary_admission, name="elementary_admission"),
     path('pre_reg_landing_page', views.pre_reg_landing_page, name="pre_reg_landing_page"),
+    path('college_grad_confirmation', views.college_grad_confirmation, name="college_grad_confirm"),
 ]

@@ -38,37 +38,71 @@ def admission(request):
     all_classification = StudentClassification.objects.all
     all_why = WhyDidYouChooseUs.objects.all
     all_where = WhereDidYouHearUs.objects.all
-    school_year = SchoolYear.objects.all
+    all_school_year = SchoolYear.objects.all
 
     if request.method == "POST":
-        form = StudentPersonalInformationForm(request.POST or None)
+        # form = StudentPersonalInformationForm(request.POST or None)
 
+        school_year = int(request.POST.get('stud_school_year'))
+        classification = int(request.POST.get('stud_classification'))
+        program = int(request.POST.get('stud_program'))
+        year_level = int(request.POST.get('stud_year_level'))
+        shift = int(request.POST.get('stud_shift'))
         last_name = request.POST.get('last_name')
         first_name = request.POST.get('first_name')
         middle_name = request.POST.get('middle_name')
-        # reference_no1 = random.randint(1, 99)
-        # reference_no2 = random.randint(1, 99)
-        #
-        # ref_no = f'ACI-{last_name[:2].upper()}{reference_no1}{first_name[:4].upper()}{reference_no2}'
-        # print(ref_no)
+        birthdate = request.POST.get('birthdate')
+        birth_place = request.POST.get('birth_place')
+        religion = request.POST.get('religion')
+        nationality = request.POST.get('nationality')
+        gender = request.POST.get('gender')
+        civil_status = request.POST.get('civil_status')
+        email_address = request.POST.get('email_address')
+        social_media_accounts = request.POST.get('social_media_accounts')
+        mobile_number = request.POST.get('mobile_number')
+        landline_number = request.POST.get('landline_number')
+        home_address = request.POST.get('home_address')
+        where_hear_us = int(request.POST.get('where_hear_us'))
+        why_choose_us = int(request.POST.get('why_choose_us'))
+        connectivity = request.POST.get('connectivity')
+        reference_no1 = random.randint(1, 99)
+        reference_no2 = random.randint(1, 99)
 
-        if form.is_valid():
-            form.save()
-            subject = "ACI Online Pre-registration Confirmation"
-            message = "Dear " + last_name + ", " + first_name + " " + middle_name + \
-                      "\nWelcome to ACI \n " \
-                      "We are delighted to received your application. \n \n" \
-                      "Your registration is confirmed and complete!"
-            from_email = 'aciunofficial@gmail.com'
-            email = form['email_address'].value()
-            to_list = [email, settings.EMAIL_HOST_USER]
-            send_mail(subject, message, from_email, to_list, fail_silently=True)
-
+        ref_no = f'ACI-{last_name[:2].upper()}{reference_no1}{first_name[:4].upper()}{reference_no2}'
+        print(ref_no)
         # return redirect('confirm')
         return render(request, 'confirmation.html', {
+            'school_year': school_year,
+            'classification': classification,
+            'program': program,
+            'year_level': year_level,
+            'shift': shift,
             'last_name': last_name,
             'first_name': first_name,
             'middle_name': middle_name,
+            'birthdate': birthdate,
+            'birth_place': birth_place,
+            'religion': religion,
+            'nationality': nationality,
+            'gender': gender,
+            'civil_status': civil_status,
+            'email_address': email_address,
+            'social_media_accounts': social_media_accounts,
+            'mobile_number': mobile_number,
+            'landline_number': landline_number,
+            'home_address': home_address,
+            'where_hear_us': where_hear_us,
+            'why_choose_us': why_choose_us,
+            'connectivity': connectivity,
+            'reference_no': ref_no,
+
+            'programs': all_programs,
+            'shifts': all_shifts,
+            'year_levels': all_year_level,
+            'classifications': all_classification,
+            'where': all_where,
+            'why': all_why,
+            'school_years': all_school_year,
         })
 
     else:
@@ -79,7 +113,7 @@ def admission(request):
             'classification': all_classification,
             'where': all_where,
             'why': all_why,
-            'school_year': school_year,
+            'school_year': all_school_year,
         })
 
 
@@ -93,7 +127,55 @@ def confirmation(request):
     # middle = "Bucong"
     # print(f'ACI-{last[:2].upper()}{reference_no1}{first[:4].upper()}{reference_no2}')
 
-    return render(request, 'confirmation.html', {})
+    all_programs = Programs.objects.all
+    all_shifts = PreferredShift.objects.all
+    all_year_level = YearLevel.objects.all
+    all_classification = StudentClassification.objects.all
+    all_why = WhyDidYouChooseUs.objects.all
+    all_where = WhereDidYouHearUs.objects.all
+    all_school_year = SchoolYear.objects.all
+
+    if request.method == "POST":
+        form = StudentPersonalInformationForm(request.POST or None)
+
+        last_name = request.POST.get('last_name')
+        first_name = request.POST.get('first_name')
+        middle_name = request.POST.get('middle_name')
+        ref_id_no = request.POST.get('stud_reference_no')
+
+        if form.is_valid():
+            form.save()
+            subject = "ACI Online Pre-registration Confirmation"
+            message = "Dear " + last_name + ", " + first_name + " " + middle_name + \
+                      "\n\nWelcome to ACI\n" \
+                      "\nWe are delighted to received your application.\n\n" \
+                      "Your registration is confirmed and complete!\n" \
+                      "Here is your reference no. (" + ref_id_no + "), for easy reference."
+            from_email = 'aciunofficial@gmail.com'
+            email = form['email_address'].value()
+            to_list = [email, settings.EMAIL_HOST_USER]
+            send_mail(subject, message, from_email, to_list, fail_silently=True)
+
+        # return redirect('confirm')
+        return render(request, 'college_grad_confirmation.html', {
+            'last_name': last_name,
+            'first_name': first_name,
+            'middle_name': middle_name,
+        })
+    else:
+        return render(request, 'confirmation.html', {
+            'programs': all_programs,
+            'shifts': all_shifts,
+            'year_levels': all_year_level,
+            'classifications': all_classification,
+            'where': all_where,
+            'why': all_why,
+            'school_years': all_school_year
+        })
+
+
+def college_grad_confirmation(request):
+    return render(request, 'college_grad_confirmation.html', {})
 
 
 def admission_requirements(request):

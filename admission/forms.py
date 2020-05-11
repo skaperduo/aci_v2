@@ -31,7 +31,7 @@ class StudentPersonalInformationForm(forms.ModelForm):
                   'connectivity',
                   'stud_school_year',
                   'export_to_CSV',
-                  # 'stud_reference_no',
+                  'stud_reference_no',
                   ]
 
 

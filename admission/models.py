@@ -95,10 +95,10 @@ class StudentPersonalInformation(models.Model):
     stud_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
     date_registered = models.DateField(auto_now_add=True)
     export_to_CSV = models.BooleanField(default=False)
-    # stud_reference_no = models.CharField(max_length=255, blank=True)
+    stud_reference_no = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
-        return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name
+        return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name + ' ' + self.stud_reference_no
        # return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name + ' ' + self.stud_reference_no
 
 

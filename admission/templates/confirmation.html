@@ -1,24 +1,308 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
 <br>
 <div class="container">
-    <div class="alert alert-success" role="alert">
-        <h4 class="alert-heading">Well done {{ last_name }}, {{ first_name }} {{ middle_name }}!</h4>
-        <p>
-            An email is sent to your email address. {{ ref }}<br>
-            The email signifies that you have already pre-registered.
-        </p>
-        <hr>
-        <P>
-            Please wait for the text message came from Agusan College, Inc Personnel for your appointment date
-            to enroll.
-        </P>
-        <hr>
-        <p class="mb-0">Thank you for choosing ACI, We are looking forward to seeing you in our CAMPUS.</p>
-    </div>
-    <a class="btn btn-primary" href="{% url 'home' %}" role="button"> go back to ACI Homepage</a>
+
+<!--    -->
+    <form method="POST" action="{% url 'confirm' %}"> {% csrf_token %}
+        <!--        Classification-->
+        <div class="row justify-content-left">
+            <div class="col-sm-3">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Reference No.</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ reference_no }}" name="stud_reference_no"
+                           readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-left">
+                    <div class="col-sm-3">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">School Year</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ school_year }}" name="stud_school_year" hidden>
+                    {% for sy in school_years %}
+                        {% if sy.pk == school_year %}
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="inputGroup-sizing-sm" value="{{ sy.school_year }}" readonly>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Classification</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ classification }}" name="stud_classification" hidden>
+                    {% for class in classifications %}
+                        {% if class.pk == classification %}
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="inputGroup-sizing-sm" value="{{ class.classification }}" readonly>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Program</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ program }}" name="stud_program" hidden>
+                    {% for prog in programs %}
+                        {% if prog.pk == program %}
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                   aria-describedby="inputGroup-sizing-sm" value="{{ prog.program_title }}" readonly>
+                        {% endif%}
+                    {% endfor%}
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Year Level</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ year_level }}" name="stud_year_level" hidden>
+                    {% for yl in year_levels %}
+                        {% if yl.pk == year_level %}
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="inputGroup-sizing-sm" value="{{ yl.year_level }}" readonly>
+                        {% endif%}
+                    {% endfor%}
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Shift</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ shift }}" name="stud_shift" hidden>
+                    {% for ps in shifts %}
+                        {% if ps.pk == shift %}
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="inputGroup-sizing-sm" value="{{ ps.shift_title }} | {{ ps.shift_time }}" readonly>
+                        {% endif%}
+                    {% endfor%}
+                </div>
+            </div>
+        </div>
+        <!--        Personal Info       -->
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Last Name</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ last_name }}" name="last_name" readonly>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">First Name</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ first_name }}" name="first_name" readonly>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Middle Name</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ middle_name }}" name="middle_name" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Birthdate</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ birthdate }}" name="birthdate" readonly>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Birth Place</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ birth_place }}" name="birth_place" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Religion</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ religion }}" name="religion" readonly>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Nationality</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ nationality }}" name="nationality" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Gender</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ gender }}" name="gender" readonly>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Civil Status</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ civil_status }}" name="civil_status" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Email Address</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ email_address }}" name="email_address" readonly>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Social Media Accounts</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ social_media_accounts }}" name="social_media_accounts" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Mobile Number</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ mobile_number }}" name="mobile_number" readonly>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Home Landline Number</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ landline_number }}" name="landline_number" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Home Address</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ home_address }}" name="home_address" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Where did you hear about ACI?</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ where_hear_us }}" name="where_hear_us" hidden>
+                    {% for wer in where %}
+                        {% if wer.pk == where_hear_us %}
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="inputGroup-sizing-sm" value="{{ wer.where }}" readonly>
+                        {% endif%}
+                    {% endfor%}
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Why did you choose ACI</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ why_choose_us }}" name="why_choose_us" hidden>
+                    {% for wy in why %}
+                        {% if wy.pk == why_choose_us %}
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="inputGroup-sizing-sm" value="{{ wy.why }}" readonly>
+                        {% endif%}
+                    {% endfor%}
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Connectivity Capacity</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ connectivity }}" name="connectivity" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <button type="submit" class="btn btn-primary" value="select" style="width:150px;">Submit</button>
+        </div>
+    </form>
 
 </div>
+<br>
 <br>
 {% endblock %}
