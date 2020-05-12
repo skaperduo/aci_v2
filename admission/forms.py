@@ -60,6 +60,7 @@ class SHS_StudentPersonalInformationForm(forms.ModelForm):
                   'why_choose_us',
                   'connectivity',
                   'shs_school_year',
+                  'shs_reference_no',
                   ]
 
 
@@ -87,6 +88,7 @@ class JHS_StudentPersonalInformationForm(forms.ModelForm):
                   'why_choose_us',
                   'connectivity',
                   'jhs_school_year',
+                  'jhs_reference_no',
                   ]
 
 
@@ -114,4 +116,5 @@ class ELEM_StudentPersonalInformationForm(forms.ModelForm):
                   'why_choose_us',
                   'connectivity',
                   'elem_school_year',
+                  'elem_reference_no',
                   ]

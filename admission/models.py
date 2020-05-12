@@ -125,7 +125,7 @@ class SeniorHighSchool_StudentPersonalInformation(models.Model):
     connectivity = models.CharField(max_length=255, default="limited connectivity")
     shs_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
     shs_date_registered = models.DateField(auto_now_add=True)
-    # shs_reference_no = models.CharField(max_length=255, blank=True)
+    shs_reference_no = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
         return str(self.pk) + ' ' + self.shs_last_name + ', ' + self.shs_first_name + ' ' + self.shs_middle_name
@@ -154,7 +154,7 @@ class JuniorHighSchool_StudentPersonalInformation(models.Model):
     connectivity = models.CharField(max_length=255, default="limited connectivity")
     jhs_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
     jhs_date_registered = models.DateField(auto_now_add=True)
-    # jhs_reference_no = models.CharField(max_length=255, blank=True)
+    jhs_reference_no = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
         return str(self.pk) + ' ' + self.jhs_last_name + ', ' + self.jhs_first_name + ' ' + self.jhs_middle_name
@@ -183,7 +183,7 @@ class Elementary_StudentPersonalInformation(models.Model):
     connectivity = models.CharField(max_length=255, default="limited connectivity")
     elem_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
     elementary_date_registered = models.DateField(auto_now_add=True)
-    # elem_reference_no = models.CharField(max_length=255, blank=True)
+    elem_reference_no = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
         return str(self.pk) + ' ' + self.elementary_last_name + ', ' + self.elementary_first_name + ' ' + self.elementary_middle_name

@@ -6,7 +6,7 @@
 <div class="container">
 <center><h3>Please check if the details are correct before submitting</h3></center><br><br>
 <!--    -->
-    <form method="POST" action="{% url 'confirm' %}"> {% csrf_token %}
+    <form method="POST" action="{% url 'shs_confirm' %}"> {% csrf_token %}
         <!--        Classification-->
         <div class="row justify-content-left">
             <div class="col-sm-3">
@@ -15,7 +15,7 @@
                         <span class="input-group-text" id="inputGroup-sizing-sm">Reference No.</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ reference_no }}" name="stud_reference_no"
+                           aria-describedby="inputGroup-sizing-sm" value="{{ reference_no }}" name="shs_reference_no"
                            readonly>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                         <span class="input-group-text">School Year</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ school_year }}" name="stud_school_year" hidden>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ school_year }}" name="shs_school_year" hidden>
                     {% for sy in school_years %}
                         {% if sy.pk == school_year %}
                         <input type="text" class="form-control" aria-label="Sizing example input"
@@ -46,7 +46,7 @@
                         <span class="input-group-text">Classification</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ classification }}" name="stud_classification" hidden>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ classification }}" name="shs_stud_classification" hidden>
                     {% for class in classifications %}
                         {% if class.pk == classification %}
                         <input type="text" class="form-control" aria-label="Sizing example input"
@@ -61,11 +61,11 @@
                         <span class="input-group-text">Program</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ program }}" name="stud_program" hidden>
-                    {% for prog in programs %}
-                        {% if prog.pk == program %}
+                           aria-describedby="inputGroup-sizing-sm" value="{{ strand }}" name="shs_stud_strand" hidden>
+                    {% for strnd in strands %}
+                        {% if strnd.pk == strand %}
                             <input type="text" class="form-control" aria-label="Sizing example input"
-                                   aria-describedby="inputGroup-sizing-sm" value="{{ prog.program_title }}" readonly>
+                                   aria-describedby="inputGroup-sizing-sm" value="{{ strnd.strand_title }}" readonly>
                         {% endif%}
                     {% endfor%}
                 </div>
@@ -76,26 +76,11 @@
                         <span class="input-group-text">Year Level</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ year_level }}" name="stud_year_level" hidden>
-                    {% for yl in year_levels %}
-                        {% if yl.pk == year_level %}
+                           aria-describedby="inputGroup-sizing-sm" value="{{ grade_level }}" name="shs_stud_grade_level" hidden>
+                    {% for gl in grade_levels %}
+                        {% if gl.pk == grade_level %}
                         <input type="text" class="form-control" aria-label="Sizing example input"
-                               aria-describedby="inputGroup-sizing-sm" value="{{ yl.year_level }}" readonly>
-                        {% endif%}
-                    {% endfor%}
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="input-group input-group-sm mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Shift</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ shift }}" name="stud_shift" hidden>
-                    {% for ps in shifts %}
-                        {% if ps.pk == shift %}
-                        <input type="text" class="form-control" aria-label="Sizing example input"
-                               aria-describedby="inputGroup-sizing-sm" value="{{ ps.shift_title }} | {{ ps.shift_time }}" readonly>
+                               aria-describedby="inputGroup-sizing-sm" value="{{ gl.grade_level }}" readonly>
                         {% endif%}
                     {% endfor%}
                 </div>
@@ -109,7 +94,7 @@
                         <span class="input-group-text">Last Name</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ last_name }}" name="last_name" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ last_name }}" name="shs_last_name" readonly>
                 </div>
             </div>
             <div class="col-sm">
@@ -118,7 +103,7 @@
                         <span class="input-group-text">First Name</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ first_name }}" name="first_name" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ first_name }}" name="shs_first_name" readonly>
                 </div>
             </div>
             <div class="col-sm">
@@ -127,7 +112,7 @@
                         <span class="input-group-text">Middle Name</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ middle_name }}" name="middle_name" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ middle_name }}" name="shs_middle_name" readonly>
                 </div>
             </div>
         </div>
@@ -139,7 +124,7 @@
                         <span class="input-group-text">Birthdate</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ birthdate }}" name="birthdate" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ birthdate }}" name="shs_birthdate" readonly>
                 </div>
             </div>
             <div class="col-sm">
@@ -148,7 +133,7 @@
                         <span class="input-group-text">Birth Place</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ birth_place }}" name="birth_place" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ birth_place }}" name="shs_birth_place" readonly>
                 </div>
             </div>
         </div>
@@ -160,7 +145,7 @@
                         <span class="input-group-text">Religion</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ religion }}" name="religion" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ religion }}" name="shs_religion" readonly>
                 </div>
             </div>
             <div class="col-sm">
@@ -169,7 +154,7 @@
                         <span class="input-group-text">Nationality</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ nationality }}" name="nationality" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ nationality }}" name="shs_nationality" readonly>
                 </div>
             </div>
         </div>
@@ -181,7 +166,7 @@
                         <span class="input-group-text">Gender</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ gender }}" name="gender" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ gender }}" name="shs_gender" readonly>
                 </div>
             </div>
             <div class="col-sm">
@@ -190,7 +175,7 @@
                         <span class="input-group-text">Civil Status</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ civil_status }}" name="civil_status" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ civil_status }}" name="shs_civil_status" readonly>
                 </div>
             </div>
         </div>
@@ -202,7 +187,7 @@
                         <span class="input-group-text">Email Address</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ email_address }}" name="email_address" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ email_address }}" name="shs_email_address" readonly>
                 </div>
             </div>
             <div class="col-sm">
@@ -211,7 +196,7 @@
                         <span class="input-group-text">Social Media Accounts</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ social_media_accounts }}" name="social_media_accounts" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ social_media_accounts }}" name="shs_social_media_accounts" readonly>
                 </div>
             </div>
         </div>
@@ -223,7 +208,7 @@
                         <span class="input-group-text">Mobile Number</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ mobile_number }}" name="mobile_number" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ mobile_number }}" name="shs_mobile_number" readonly>
                 </div>
             </div>
             <div class="col-sm">
@@ -232,7 +217,7 @@
                         <span class="input-group-text">Home Landline Number</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ landline_number }}" name="landline_number" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ landline_number }}" name="shs_landline_number" readonly>
                 </div>
             </div>
         </div>
@@ -244,7 +229,7 @@
                         <span class="input-group-text">Home Address</span>
                     </div>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-sm" value="{{ home_address }}" name="home_address" readonly>
+                           aria-describedby="inputGroup-sizing-sm" value="{{ home_address }}" name="shs_home_address" readonly>
                 </div>
             </div>
         </div>
