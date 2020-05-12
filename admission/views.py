@@ -150,7 +150,12 @@ def confirmation(request):
                       "\n\nWelcome to ACI\n" \
                       "\nWe are delighted to received your application.\n\n" \
                       "Your registration is confirmed and complete!\n" \
-                      "Here is your reference no. (" + ref_id_no + "), for easy reference."
+                      "Here is your reference no. (" + ref_id_no + "), for easy reference.\n\n" \
+                                                                   "below are ACI's Official Contact Number:\n\n" \
+                                                                   "Registrar 342-8004\n" \
+                                                                   "Accounting Office 342-5843\n" \
+                                                                   "QA 225-2330\n" \
+                                                                   "Mobile: 09483626888\n"
             from_email = 'aciunofficial@gmail.com'
             email = form['email_address'].value()
             to_list = [email, settings.EMAIL_HOST_USER]
@@ -280,7 +285,12 @@ def shs_confirmation(request):
                       "\n\nWelcome to ACI\n" \
                       "\nWe are delighted to received your application.\n\n" \
                       "Your registration is confirmed and complete!\n" \
-                      "Here is your reference no. (" + ref_id_no + "), for easy reference."
+                      "Here is your reference no. (" + ref_id_no + "), for easy reference.\n\n" \
+                                                                   "below are ACI's Official Contact Number:\n\n" \
+                                                                   "Registrar 342-8004\n" \
+                                                                   "Accounting Office 342-5843\n" \
+                                                                   "QA 225-2330\n" \
+                                                                   "Mobile: 09483626888\n"
             from_email = 'aciunofficial@gmail.com'
             email = form['shs_email_address'].value()
             to_list = [email, settings.EMAIL_HOST_USER]
@@ -404,7 +414,12 @@ def jhs_confirmation(request):
                       "\n\nWelcome to ACI\n" \
                       "\nWe are delighted to received your application.\n\n" \
                       "Your registration is confirmed and complete!\n" \
-                      "Here is your reference no. (" + ref_id_no + "), for easy reference."
+                      "Here is your reference no. (" + ref_id_no + "), for easy reference.\n\n" \
+                                                                   "below are ACI's Official Contact Number:\n\n" \
+                                                                   "Registrar 342-8004\n" \
+                                                                   "Accounting Office 342-5843\n" \
+                                                                   "QA 225-2330\n" \
+                                                                   "Mobile: 09483626888\n"
             from_email = 'aciunofficial@gmail.com'
             email = form['jhs_email_address'].value()
             to_list = [email, settings.EMAIL_HOST_USER]
@@ -526,8 +541,13 @@ def elem_confirmation(request):
             message = "Dear " + elementary_last_name + ", " + elementary_first_name + " " + elementary_middle_name + \
                       "\n\nWelcome to ACI\n" \
                       "\nWe are delighted to received your application.\n\n" \
-                      "Your registration is confirmed and complete!\n" \
-                      "Here is your reference no. (" + ref_id_no + "), for easy reference."
+                      "Your registration is confirmed and complete!\n\n" \
+                      "Here is your reference no. (" + ref_id_no + "), for easy reference.\n\n" \
+                                                                   "below are ACI's Official Contact Number:\n\n" \
+                                                                   "Registrar 342-8004\n" \
+                                                                   "Accounting Office 342-5843\n" \
+                                                                   "QA 225-2330\n" \
+                                                                   "Mobile: 09483626888\n"
             from_email = 'aciunofficial@gmail.com'
             email = form['elementary_email_address'].value()
             to_list = [email, settings.EMAIL_HOST_USER]
