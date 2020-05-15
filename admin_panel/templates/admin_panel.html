@@ -51,7 +51,11 @@
 
             <div class="form-group">
                 <label>Date Registered</label>
-                <input type="date" class="form-control" name="date_registered">
+                <input type="date" class="form-control" name="date_registered_min">
+            </div>
+            <div class="form-group">
+                <label>Date Registered</label>
+                <input type="date" class="form-control" name="date_registered_max">
             </div>
 
             <div class="form-group">
@@ -120,11 +124,11 @@
 <script>
     $(document).ready( function () {
         $('#students-table').DataTable({
-        dom: 'B<"clear">lftrtip',
-        buttons:{
-            name: 'primary',
-            buttons: ['copy', 'csv', 'excel', 'pdf']
-        }
+<!--        dom: 'B<"clear">lfrtip',-->
+<!--        buttons:{-->
+<!--            name: 'primary',-->
+<!--            buttons: ['copy', 'csv', 'excel', 'pdf']-->
+<!--        }-->
         });
     });
 </script>
@@ -132,10 +136,6 @@
 <!--<script>-->
 <!--$(document).ready(function (){-->
 <!--   var table = $('#students-table').DataTable({-->
-<!--      buttons:{-->
-<!--      name: 'primary',-->
-<!--      buttons: ['copy', 'csv', 'excel', 'pdf']-->
-<!--      },-->
 <!--      'columnDefs': [{-->
 <!--         'targets': 0,-->
 <!--         'searchable': false,-->

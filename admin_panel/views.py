@@ -53,7 +53,8 @@ def admin_panel(request):
     stud_program = request.GET.get('stud_program')
     stud_year_level = request.GET.get('stud_year_level')
     connectivity = request.GET.get('connectivity')
-    date_registered = request.GET.get('date_registered')
+    date_registered_min = request.GET.get('date_registered')
+    date_registered_max = request.GET.get('date_registered')
     export = request.GET.get('export_to_CSV')
 
     if is_valid_queryparam(stud_program) and stud_program != 'Choose...':
@@ -62,8 +63,11 @@ def admin_panel(request):
     if is_valid_queryparam(connectivity) and connectivity != 'Choose...':
         qs = qs.filter(connectivity__icontains=connectivity)
 
-    if is_valid_queryparam(date_registered):
-        qs = qs.filter(date_registered=date_registered)
+    if is_valid_queryparam(date_registered_min):
+        qs = qs.filter(date_registered__gte=date_registered_min)
+
+    if is_valid_queryparam(date_registered_max):
+        qs = qs.filter(date_registered__lt=date_registered_max)
 
     if is_valid_queryparam(count):
         qs = qs.order_by('date_registered')[:int(count)]
