@@ -2,9 +2,9 @@
 {% block content %}
 <br>
 <div class="container">
-    <div class="row justify-content-center">
-        <h1>Senior High School Online Pre-registration Form</h1>
-    </div>
+    <center>
+        <h1>Graduate School Online Pre-registration Form</h1>
+    </center>
     <br>
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
@@ -12,12 +12,13 @@
         <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalScrollableTitle">ACI PRIVACY NOTICE</h5>
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">ACI DATA PRIVACY NOTICE</h5>
                     <!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
                     <!--                    <span aria-hidden="true">&times;</span>-->
-                    <!--                </button>-->
+                    </button>
                 </div>
                 <div class="modal-body">
+
                     <p><b>
                         Agusan Colleges, Incorporated is duly obligated to protect all personal data the
                         institution collects and processes from the students, faculty, administrative personnel,
@@ -41,7 +42,7 @@
                     E. Financial and billing information.<br>
                     F. Photographic data such as photos, videos, signatures both handwritten and digital.<br>
                     G. Student research work such as thesis and projects and<br>
-                    H. Students extra-curricular activities.<br>
+                        H. Students extra-curricular activities.<br>
                     </p>
                     <p>
                     <hr>
@@ -96,15 +97,14 @@
         <b>Note</b>: Fields marked with (<span class="required" style="color: red;">*</span>) are required.
     </p>
 
-    <form method="POST" action="{% url 'shs_admission' %}"> {% csrf_token %}
+    <form method="POST" action="{% url 'grad_admission' %}"> {% csrf_token %}
 
         <br>
         <hr>
         <b>
-            <label>Student Classification and Preference</label>
+            <lable>Student Classification and Preference</lable>
         </b>
         <hr>
-
 
         <div class="container">
             <div class="input-group input-group-sm mb-3" style="width: 270px;">
@@ -114,19 +114,16 @@
                 {% for sy in school_year %}
                     {% if sy.sy_status == 'active' %}
                         <input type="text" class="form-control" aria-label="Sizing example input"
-                               aria-describedby="inputGroup-sizing-sm" value="{{ sy.pk }}" name="shs_school_year" readonly
-                               hidden>
-                        <input type="text" class="form-control" aria-label="Sizing example input"
-                               aria-describedby="inputGroup-sizing-sm" value="{{ sy.school_year }} | {{ sy.semester }}" readonly>
+                               aria-describedby="inputGroup-sizing-sm" value="{{ sy.pk }}" name="grad_stud_school_year" hidden>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{ sy.school_year }} | {{ sy.semester }}" readonly>
                     {% endif %}
                 {% endfor %}
             </div>
             <br>
-
             <div class="radio">
                 {% for class in classification %}
                 <div class="col-sm">
-                    <label><input type="radio" name="shs_stud_classification" value="{{ class.pk }}" required>
+                    <label><input type="radio" name="grad_stud_classification" value="{{ class.pk }}" required>
                         {{ class.classification }}</label> &nbsp&nbsp&nbsp
                 </div>
                 {% endfor %}
@@ -139,12 +136,12 @@
                 <div class="col">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text"><span class="required" style="color: red;">*</span>Grade Level</label>
+                            <label class="input-group-text"><span class="required" style="color: red;">*</span>Program</label>
                         </div>
-                        <select class="custom-select" name="shs_stud_grade_level" required>
+                        <select class="custom-select" name="grad_stud_program" required>
                             <option value="" selected>Choose...</option>
-                            {% for gradelevel in grade_level|slice:"12:14" %}
-                            <option value="{{ gradelevel.pk }}">{{ gradelevel.grade_level }}</option>
+                            {% for prog in programs|slice:"5:7" %}
+                            <option value="{{ prog.pk }}">{{ prog.program_title }}</option>
                             {% endfor %}
                         </select>
                     </div>
@@ -153,17 +150,32 @@
                 <div class="col">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text"><span class="required" style="color: red;">*</span>Strand</label>
+                            <label class="input-group-text"><span class="required" style="color: red;">*</span>Year Level</label>
                         </div>
-                        <select class="custom-select" name="shs_stud_strand" required>
+                        <select class="custom-select" name="grad_stud_year_level" required>
                             <option value="" selected>Choose...</option>
-                            {% for strand in strands %}
-                            <option value="{{ strand.pk}}">{{ strand.strand_title }}</option>
+                            {% for yearlevel in year_level %}
+                            <option value="{{ yearlevel.pk}}">{{ yearlevel.year_level}}</option>
                             {% endfor %}
                         </select>
                     </div>
                 </div>
 
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text"><span class="required" style="color: red;">*</span>Preferred Shift</label>
+                        </div>
+                        <select class="custom-select" name="grad_stud_shift" required>
+                            <option value="" selected>Choose...</option>
+                            {% for shift in shifts|slice:"3:6" %}
+                            <option name="stud_shift" value="{{ shift.pk}}">{{ shift.shift_title}} :
+                                {{ shift.shift_time}}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -176,19 +188,19 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Last Name</label>
-                    <input type="text" class="form-control" name="shs_last_name" required>
+                    <input type="text" class="form-control" name="grad_last_name" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>First Name</label>
-                    <input type="text" class="form-control" name="shs_first_name" required>
+                    <input type="text" class="form-control" name="grad_first_name" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Middle Name</label>
-                    <input type="text" class="form-control" name="shs_middle_name" required>
+                    <input type="text" class="form-control" name="grad_middle_name" required>
                 </div>
             </div>
         </div>
@@ -197,13 +209,13 @@
             <div class="col-sm-3">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Birthdate</label>
-                    <input type="date" class="form-control" name="shs_birthdate" required>
+                    <input type="date" class="form-control" name="grad_birthdate" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Birth Place</label>
-                    <input type="text" class="form-control" name="shs_birth_place" required>
+                    <input type="text" class="form-control" name="grad_birth_place" required>
                 </div>
             </div>
         </div>
@@ -212,13 +224,13 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label>Religion</label>
-                    <input type="text" class="form-control" name="shs_religion">
+                    <input type="text" class="form-control" name="grad_religion">
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Nationality</label>
-                    <input type="text" class="form-control" name="shs_nationality" required>
+                    <input type="text" class="form-control" name="grad_nationality" required>
                 </div>
             </div>
         </div>
@@ -227,13 +239,17 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Gender</label>
-                    <input type="text" class="form-control" name="shs_gender" required>
+                    <input type="text" class="form-control" name="grad_gender" required>
                 </div>
             </div>
             <div class="col-sm">
+                <!--            <div class="form-group">-->
+                <!--                <label><span class="required">*</span>Civil Status</label>-->
+                <!--                <input type="text" class="form-control" name="civil_status" required>-->
+                <!--            </div>-->
                 <div class="form-group">
                     <label for="exampleFormControlSelect1"><span class="required" style="color: red;">*</span>Civil Status</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="shs_civil_status" required>
+                    <select class="form-control" id="exampleFormControlSelect1" name="grad_civil_status" required>
                         <option value="" selected>Choose...</option>
                         <option value="Single">Single</option>
                         <option value="Married">Married</option>
@@ -248,13 +264,13 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Email Address</label>
-                    <input type="email" class="form-control" name="shs_email_address" required>
+                    <input type="email" class="form-control" name="grad_email_address" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label>Social Media Accounts</label>
-                    <input type="text" class="form-control" name="shs_social_media_accounts">
+                    <input type="text" class="form-control" name="grad_social_media_accounts">
                 </div>
             </div>
         </div>
@@ -263,22 +279,22 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Mobile Number</label>
-                    <input type="text" class="form-control" name="shs_mobile_number" value="+63" required>
+                    <input type="text" class="form-control" name="grad_mobile_number" value="+63 " required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
-                    <label>Residence Landline Number</label>
-                    <input type="text" class="form-control" name="shs_landline_number" value="085">
+                    <label>Home Landline Number</label>
+                    <input type="text" class="form-control" name="grad_landline_number" value="085 ">
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm">
+            <div class="col-12">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Home Address</label>
-                    <input type="text" class="form-control" name="shs_home_address" required>
+                    <input type="text" class="form-control" name="grad_home_address" required>
                 </div>
             </div>
         </div>

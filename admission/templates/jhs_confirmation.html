@@ -4,7 +4,7 @@
 
 <br>
 <div class="container">
-<center><h3>Please check if the details are correct before submitting</h3></center><br><br>
+<center><h3>Please double check if the details are correct before submitting</h3></center><br><br>
 <!--    -->
     <form method="POST" action="{% url 'jhs_confirm' %}"> {% csrf_token %}
         <!--        Classification-->
@@ -22,7 +22,7 @@
         </div>
 
         <div class="row justify-content-left">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                 <div class="input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">School Year</span>
@@ -32,7 +32,7 @@
                     {% for sy in school_years %}
                         {% if sy.pk == school_year %}
                         <input type="text" class="form-control" aria-label="Sizing example input"
-                               aria-describedby="inputGroup-sizing-sm" value="{{ sy.school_year }}" readonly>
+                               aria-describedby="inputGroup-sizing-sm" value="{{ sy.school_year }} | {{ sy.semester }}" readonly>
                         {% endif %}
                     {% endfor %}
                 </div>

@@ -20,7 +20,7 @@ class SHSstrands(models.Model):
 
 
 class PreferredShift(models.Model):
-    shift_title = models.CharField(max_length=3)
+    shift_title = models.CharField(max_length=50)
     shift_time = models.CharField(max_length=50)
 
     def __str__(self):
@@ -64,10 +64,11 @@ class WhyDidYouChooseUs(models.Model):
 
 class SchoolYear(models.Model):
     school_year = models.CharField(max_length=255)
+    semester = models.CharField(max_length=50, default="1st-semester")
     sy_status = models.CharField(max_length=255, default="active")
 
     def __str__(self):
-        return self.school_year
+        return self.school_year + ' ' + self.semester
 
 
 class StudentPersonalInformation(models.Model):
@@ -93,13 +94,44 @@ class StudentPersonalInformation(models.Model):
     why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
     connectivity = models.CharField(max_length=255, default="limited connectivity")
     stud_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
-    date_registered = models.DateField(auto_now_add=True)
+    date_registered = models.DateTimeField(auto_now_add=True, auto_now=False)
     export_to_CSV = models.BooleanField(default=False)
     stud_reference_no = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
         return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name + ' ' + self.stud_reference_no
        # return str(self.pk) + ' ' + self.last_name + ', ' + self.first_name + ' ' + self.middle_name + ' ' + self.stud_reference_no
+
+
+class GradStudentPersonalInformation(models.Model):
+    grad_last_name = models.CharField(max_length=255)
+    grad_first_name = models.CharField(max_length=255)
+    grad_middle_name = models.CharField(max_length=255)
+    grad_birthdate = models.CharField(max_length=255)
+    grad_birth_place = models.CharField(max_length=255)
+    grad_religion = models.CharField(max_length=255, blank=True)
+    grad_nationality = models.CharField(max_length=255)
+    grad_gender = models.CharField(max_length=255)
+    grad_civil_status = models.CharField(max_length=255)
+    grad_email_address = models.CharField(max_length=255)
+    grad_social_media_accounts = models.CharField(max_length=255, blank=True)
+    grad_mobile_number = models.CharField(max_length=255)
+    grad_landline_number = models.CharField(max_length=255,blank=True)
+    grad_home_address = models.CharField(max_length=255)
+    grad_stud_classification = models.ForeignKey(StudentClassification, default=1, on_delete=models.SET_DEFAULT)
+    grad_stud_program = models.ForeignKey(Programs, default=1, on_delete=models.SET_DEFAULT)
+    grad_stud_shift = models.ForeignKey(PreferredShift, default=1, on_delete=models.SET_DEFAULT)
+    grad_stud_year_level = models.ForeignKey(YearLevel, default=1, on_delete=models.SET_DEFAULT)
+    where_hear_us = models.ForeignKey(WhereDidYouHearUs, default=1, on_delete=models.SET_DEFAULT)
+    why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
+    connectivity = models.CharField(max_length=255, default="limited connectivity")
+    grad_stud_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
+    grad_date_registered = models.DateTimeField(auto_now_add=True, auto_now=False)
+    export_to_CSV = models.BooleanField(default=False)
+    grad_stud_reference_no = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        return str(self.pk) + ' ' + self.grad_last_name + ', ' + self.grad_first_name + ' ' + self.grad_middle_name + ' ' + self.grad_stud_reference_no
 
 
 class SeniorHighSchool_StudentPersonalInformation(models.Model):
@@ -124,7 +156,8 @@ class SeniorHighSchool_StudentPersonalInformation(models.Model):
     why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
     connectivity = models.CharField(max_length=255, default="limited connectivity")
     shs_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
-    shs_date_registered = models.DateField(auto_now_add=True)
+    shs_date_registered = models.DateTimeField(auto_now_add=True, auto_now=False)
+    export_to_CSV = models.BooleanField(default=False)
     shs_reference_no = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
@@ -153,7 +186,8 @@ class JuniorHighSchool_StudentPersonalInformation(models.Model):
     why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
     connectivity = models.CharField(max_length=255, default="limited connectivity")
     jhs_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
-    jhs_date_registered = models.DateField(auto_now_add=True)
+    jhs_date_registered = models.DateTimeField(auto_now_add=True, auto_now=False)
+    export_to_CSV = models.BooleanField(default=False)
     jhs_reference_no = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
@@ -182,7 +216,8 @@ class Elementary_StudentPersonalInformation(models.Model):
     why_choose_us = models.ForeignKey(WhyDidYouChooseUs, default=1, on_delete=models.SET_DEFAULT)
     connectivity = models.CharField(max_length=255, default="limited connectivity")
     elem_school_year = models.ForeignKey(SchoolYear, default=1, on_delete=models.SET_DEFAULT)
-    elementary_date_registered = models.DateField(auto_now_add=True)
+    elementary_date_registered = models.DateTimeField(auto_now_add=True, auto_now=False)
+    export_to_CSV = models.BooleanField(default=False)
     elem_reference_no = models.CharField(max_length=255, blank=True)
 
     def __str__(self):

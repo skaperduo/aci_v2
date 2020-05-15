@@ -14,7 +14,7 @@
             </div>
             <div class="modal-body">
                 <p>
-                    In light of the COVID-19 Pandemic, we, from Agusan Colleges, Inc. made this Online Pre-registration
+                    In the light of the COVID-19 Pandemic, we, from Agusan Colleges, Inc. made this Online Pre-registration
                     to
                     adopt our registration process to the current situation.
                 </p>
@@ -63,19 +63,24 @@
                                 <input class="form-check-input" type="radio" id="r1" name="pre_reg"
                                        value="without connectivity" required>
                                 <label class="form-check-label">
-                                    College & Graduate Studies Admission
+                                    College Admission
                                 </label><br>
                                 <input class="form-check-input" type="radio" id="r2" name="pre_reg"
+                                       value="without connectivity" required>
+                                <label class="form-check-label">
+                                    Graduate Studies Admission
+                                </label><br>
+                                <input class="form-check-input" type="radio" id="r3" name="pre_reg"
                                        value="limited connectivity" required>
                                 <label class="form-check-label">
                                     Senior High School Admission
                                 </label><br>
-                                <input class="form-check-input" type="radio" id="r3" name="pre_reg"
+                                <input class="form-check-input" type="radio" id="r4" name="pre_reg"
                                        value="with connectivity" required>
                                 <label class="form-check-label">
                                     Junior High School Admission
                                 </label><br>
-                                <input class="form-check-input" type="radio" id="r4" name="pre_reg"
+                                <input class="form-check-input" type="radio" id="r5" name="pre_reg"
                                        value="with connectivity" required>
                                 <label class="form-check-label">
                                     Elementary Admission
@@ -102,9 +107,10 @@
 <script>
     function go(){
     if(document.getElementById('r1').checked){location.href='{% url 'admission' %}';}
-    else if(document.getElementById('r2').checked){location.href='{% url 'shs_admission' %}';}
-    else if(document.getElementById('r3').checked){location.href='{% url 'jhs_admission' %}';}
-    else if(document.getElementById('r4').checked){location.href='{% url 'elementary_admission' %}';}
+    else if(document.getElementById('r2').checked){location.href='{% url 'grad_admission' %}';}
+    else if(document.getElementById('r3').checked){location.href='{% url 'shs_admission' %}';}
+    else if(document.getElementById('r4').checked){location.href='{% url 'jhs_admission' %}';}
+    else if(document.getElementById('r5').checked){location.href='{% url 'elementary_admission' %}';}
     }
 
 </script>

@@ -106,7 +106,7 @@
         <hr>
 
         <div class="container">
-            <div class="input-group input-group-sm mb-3" style="width: 200px;">
+            <div class="input-group input-group-sm mb-3" style="width: 270px;">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-sm">School Year</span>
                 </div>
@@ -116,7 +116,7 @@
                                aria-describedby="inputGroup-sizing-sm" value="{{ sy.pk }}" name="elem_school_year" readonly
                                hidden>
                         <input type="text" class="form-control" aria-label="Sizing example input"
-                               aria-describedby="inputGroup-sizing-sm" value="{{ sy }}" readonly>
+                               aria-describedby="inputGroup-sizing-sm" value="{{ sy.school_year }} | {{ sy.semester }}" readonly>
                     {% endif %}
                 {% endfor %}
             </div>

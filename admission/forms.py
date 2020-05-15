@@ -1,7 +1,7 @@
 from django import forms
 from .models import Programs, SHSstrands, PreferredShift, YearLevel, GradeLevel, StudentClassification,\
     StudentPersonalInformation, SeniorHighSchool_StudentPersonalInformation, JuniorHighSchool_StudentPersonalInformation,\
-    Elementary_StudentPersonalInformation, WhereDidYouHearUs, WhyDidYouChooseUs, SchoolYear
+    Elementary_StudentPersonalInformation, WhereDidYouHearUs, WhyDidYouChooseUs, SchoolYear, GradStudentPersonalInformation
 
 
 class StudentPersonalInformationForm(forms.ModelForm):
@@ -32,6 +32,37 @@ class StudentPersonalInformationForm(forms.ModelForm):
                   'stud_school_year',
                   'export_to_CSV',
                   'stud_reference_no',
+                  ]
+
+
+class GradStudentPersonalInformationForm(forms.ModelForm):
+    class Meta:
+        model = GradStudentPersonalInformation
+
+        fields = ['grad_last_name',
+                  'grad_first_name',
+                  'grad_middle_name',
+                  'grad_birthdate',
+                  'grad_birth_place',
+                  'grad_religion',
+                  'grad_nationality',
+                  'grad_gender',
+                  'grad_civil_status',
+                  'grad_email_address',
+                  'grad_social_media_accounts',
+                  'grad_mobile_number',
+                  'grad_landline_number',
+                  'grad_home_address',
+                  'grad_stud_classification',
+                  'grad_stud_program',
+                  'grad_stud_shift',
+                  'grad_stud_year_level',
+                  'where_hear_us',
+                  'why_choose_us',
+                  'connectivity',
+                  'grad_stud_school_year',
+                  'export_to_CSV',
+                  'grad_stud_reference_no',
                   ]
 
 

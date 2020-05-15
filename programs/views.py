@@ -27,3 +27,11 @@ def program_bsit(request):
     return render(request, 'program_bsit.html', {})
 
 
+def program_maed(request):
+    return render(request, 'program_maed.html', {})
+
+
+def program_mba(request):
+    return render(request, 'program_mba.html', {})
+
+

@@ -24,9 +24,9 @@
             <div class="form-group">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Programs</label>
+                        <label class="input-group-text" for="inputGroupSelect02">Programs</label>
                     </div>
-                    <select class="custom-select" id="inputGroupSelect01" name="stud_program">
+                    <select class="custom-select" id="inputGroupSelect02" name="stud_program">
                         <option selected>Choose...</option>
                         {% for programs in stud_programs %}
                         <option value="{{ programs }}"> {{ programs }}</option>
@@ -38,9 +38,9 @@
             <div class="form-group">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect02">Connectivity</label>
+                        <label class="input-group-text" for="inputGroupSelect03">Connectivity</label>
                     </div>
-                    <select class="custom-select" id="inputGroupSelect02" name="connectivity">
+                    <select class="custom-select" id="inputGroupSelect03" name="connectivity">
                         <option selected>Choose...</option>
                         <option value="with connectivity">with connectivity</option>
                         <option value="limited connectivity">with limited connectivity</option>
@@ -67,8 +67,8 @@
     <br>
 
     <div class="table-responsive">
-        <table class="table">
-            <thead class="thead-dark">
+        <table class="table" id="students-table">
+            <thead class="thread-dark">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Last Name</th>
@@ -77,6 +77,9 @@
                 <th scope="col">Program</th>
                 <th scope="col">Year Level</th>
                 <th scope="col">Connectivity</th>
+                <th scope="col">Date Registered</th>
+                <th scope="col">Mobile #</th>
+                <th scope="col">Reference #</th>
             </tr>
             </thead>
             <tbody>
@@ -89,14 +92,109 @@
                 <td>{{ student_info.stud_program }}</td>
                 <td>{{ student_info.stud_year_level }}</td>
                 <td>{{ student_info.connectivity }}</td>
+                <td>{{ student_info.date_registered }}</td>
+                <td>{{ student_info.mobile_number }}</td>
+                <td>{{ student_info.stud_reference_no }}</td>
             </tr>
             {% endfor %}
             </tbody>
+<!--            <div class="pagination">-->
+<!--                <span class="step-link">-->
+<!--                {% if spi.has_previous %}-->
+<!--                    <a href="?page={{ spi.previous_page_number }}">previous</a>-->
+<!--                {% endif %}-->
+<!--                <span class="current">-->
+<!--                    Page {{ spi.number }} of {{ spi.paginator.num_pages }}-->
+<!--                </span>-->
+<!--                {% if spi.has_next %}-->
+<!--                    <a href="?page={{ spi.next_page_number }}">next</a>-->
+<!--                {% endif %}-->
+<!--                </span>-->
+<!--            </div>-->
         </table>
     </div>
     </div>
 </div>
 <br>
+
+<!--<script>-->
+<!--    $(document).ready( function () {-->
+<!--        $('#students-table').DataTable({-->
+<!--        dom: 'B<"clear">lftrtip',-->
+<!--        buttons:{-->
+<!--            name: 'primary',-->
+<!--            buttons: ['copy', 'csv', 'excel', 'pdf']-->
+<!--        }-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+<script>
+$(document).ready(function (){
+   var table = $('#students-table').DataTable({
+      buttons:{
+      name: 'primary',
+      buttons: ['copy', 'csv', 'excel', 'pdf']
+      },
+<!--      'ajax': {-->
+<!--         'url': '/lab/articles/jquery-datatables-how-to-add-a-checkbox-column/ids-arrays.txt'-->
+<!--      },-->
+      'columnDefs': [{
+         'targets': 0,
+         'searchable': false,
+         'orderable': false,
+         'className': 'dt-body-center',
+         'render': function (data, type, full, meta){
+             return '<input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '">';
+         }
+      }],
+      'order': [[1, 'asc']]
+   });
+
+   // Handle click on "Select all" control
+   $('#example-select-all').on('click', function(){
+      // Get all rows with search applied
+      var rows = table.rows({ 'search': 'applied' }).nodes();
+      // Check/uncheck checkboxes for all rows in the table
+      $('input[type="checkbox"]', rows).prop('checked', this.checked);
+   });
+
+   // Handle click on checkbox to set state of "Select all" control
+   $('#example tbody').on('change', 'input[type="checkbox"]', function(){
+      // If checkbox is not checked
+      if(!this.checked){
+         var el = $('#example-select-all').get(0);
+         // If "Select all" control is checked and has 'indeterminate' property
+         if(el && el.checked && ('indeterminate' in el)){
+            // Set visual state of "Select all" control
+            // as 'indeterminate'
+            el.indeterminate = true;
+         }
+      }
+   });
+
+   // Handle form submission event
+   $('#frm-example').on('submit', function(e){
+      var form = this;
+
+      // Iterate over all checkboxes in the table
+      table.$('input[type="checkbox"]').each(function(){
+         // If checkbox doesn't exist in DOM
+         if(!$.contains(document, this)){
+            // If checkbox is checked
+            if(this.checked){
+               // Create a hidden element
+               $(form).append(
+                  $('<input>')
+                     .attr('type', 'hidden')
+                     .attr('name', this.name)
+                     .val(this.value)
+               );
+            }
+         }
+      });
+   });
+});
+</script>
 
 {% endblock %}
 
