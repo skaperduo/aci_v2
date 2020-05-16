@@ -1,0 +1,102 @@
+.body {
+    background-color: #f8f9fa;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-main {
+    font-family: "Times New Roman", Times, serif;
+    height: 100px;
+    background-color: #343a40;
+
+}
+
+.footer-main p {
+    padding-top: 10px;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+}
+
+
+.navLink .nav-link {
+    color: black;
+}
+
+.navLink .active {
+    background-color: black;
+    color: black;
+}
+
+.navbar .nav-item .nav-link {
+    color: white;
+}
+
+/*.dropdown:hover>.dropdown-menu {
+    display: block;
+    margin-left: 50px;
+    margin-top: 0px;
+}*/
+
+.dropdown .dropdown-menu {
+    margin-left: 50px;
+    margin-top: 0px;
+}
+
+.dropdown .dropdown-menu a:hover {
+    background-color: #b0b0b0;
+}
+
+nav .nav-link {
+    margin-left: 50px;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #b0b0b0;
+    width: 100%;
+}
+
+/* Programs CSS */
+
+.programs ul li{
+    list-style: none;
+}
+
+/* Pre-reg Icon */
+
+.pre_reg_icon {
+    top: 40%;
+    right: 15px;
+    background-color: #1e2736;
+    width: 180px;
+    position: fixed;
+    z-index: 9999;
+    opacity: .95;
+}
+
+.pre_reg_icon:hover {
+    padding-right: 30px;
+    width: 210px;
+    transition: 1s;
+}
+
+.pre_reg_icon label{
+    color: #fff;
+    font-size: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.pre_reg_icon a {
+    height: 100%;
+    width: 100%px;
+    list-style-type: none;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
