@@ -19,12 +19,12 @@ from admin_panel import views as user_views
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('run-admin/', admin.site.urls),
     path('', include('homepage.urls')),
     path('admission/', include('admission.urls')),
-    path('about_us/', include('about_us.urls')),
+    path('about-us/', include('about_us.urls')),
     path('programs/', include('programs.urls')),
-    path('admin_panel/', include('admin_panel.urls')),
+    path('admin-panel/', include('admin_panel.urls')),
     # path('register', user_views.register_view, name='register'),
     path('login/', auth_views.LoginView.as_view(redirect_authenticated_user=True, template_name='login.html'), name='login'),
     # path('login/', auth_views.LoginView.as_view(redirect_authenticated_user=True), name='login'),

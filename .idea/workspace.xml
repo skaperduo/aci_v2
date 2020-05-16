@@ -3,21 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/college_grad_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/college_grad_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/elem_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/elem_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/elementary_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/elementary_admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/grad_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/grad_admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/grad_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/grad_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/jhs_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/jhs_admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/jhs_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/jhs_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/shs_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/shs_admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/shs_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/shs_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_us/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/about_us/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aciWebsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/aciWebsite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
