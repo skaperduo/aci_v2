@@ -19,7 +19,7 @@ from admin_panel import views as user_views
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('run-admin/', admin.site.urls),
     path('', include('homepage.urls')),
     path('admission/', include('admission.urls')),
     path('about-us/', include('about_us.urls')),
