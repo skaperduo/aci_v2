@@ -57,7 +57,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'False')
 
 ALLOWED_HOSTS = ['agusancolleges.herokuapp.com']
 # ALLOWED_HOSTS = []
@@ -167,7 +167,7 @@ USE_TZ = False
 
 COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
