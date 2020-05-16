@@ -29,6 +29,7 @@ class StudentPersonalInformationForm(forms.ModelForm):
                   'where_hear_us',
                   'why_choose_us',
                   'connectivity',
+                  'gadget',
                   'stud_school_year',
                   'export_to_CSV',
                   'stud_reference_no',
@@ -60,6 +61,7 @@ class GradStudentPersonalInformationForm(forms.ModelForm):
                   'where_hear_us',
                   'why_choose_us',
                   'connectivity',
+                  'gadget',
                   'grad_stud_school_year',
                   'export_to_CSV',
                   'grad_stud_reference_no',
@@ -90,6 +92,7 @@ class SHS_StudentPersonalInformationForm(forms.ModelForm):
                   'where_hear_us',
                   'why_choose_us',
                   'connectivity',
+                  'gadget',
                   'shs_school_year',
                   'shs_reference_no',
                   ]
@@ -118,6 +121,7 @@ class JHS_StudentPersonalInformationForm(forms.ModelForm):
                   'where_hear_us',
                   'why_choose_us',
                   'connectivity',
+                  'gadget',
                   'jhs_school_year',
                   'jhs_reference_no',
                   ]
@@ -146,6 +150,7 @@ class ELEM_StudentPersonalInformationForm(forms.ModelForm):
                   'where_hear_us',
                   'why_choose_us',
                   'connectivity',
+                  'gadget',
                   'elem_school_year',
                   'elem_reference_no',
                   ]

@@ -65,6 +65,7 @@ def admission(request):
         where_hear_us = int(request.POST.get('where_hear_us'))
         why_choose_us = int(request.POST.get('why_choose_us'))
         connectivity = request.POST.get('connectivity')
+        gadget = request.POST.get('gadget')
         reference_no1 = random.randint(1, 999)
         reference_no2 = random.randint(1, 999)
 
@@ -94,6 +95,7 @@ def admission(request):
             'where_hear_us': where_hear_us,
             'why_choose_us': why_choose_us,
             'connectivity': connectivity,
+            'gadget': gadget,
             'reference_no': ref_no,
 
             'programs': all_programs,
@@ -214,6 +216,7 @@ def grad_admission(request):
         where_hear_us = int(request.POST.get('where_hear_us'))
         why_choose_us = int(request.POST.get('why_choose_us'))
         connectivity = request.POST.get('connectivity')
+        gadget = request.POST.get('gadget')
         # reference_no1 = random.randint(1, 999)
         # reference_no2 = random.randint(1, 999)
         ref_no = f'ACI-2020-M{id_pk.pk}'
@@ -243,6 +246,7 @@ def grad_admission(request):
             'where_hear_us': where_hear_us,
             'why_choose_us': why_choose_us,
             'connectivity': connectivity,
+            'gadget': gadget,
             'reference_no': ref_no,
 
             'programs': all_programs,
@@ -339,7 +343,7 @@ def shs_admission(request):
 
     if request.method == "POST":
         # form = StudentPersonalInformationForm(request.POST or None)
-        id_pk = SHS_StudentPersonalInformationForm.objects.latest('pk')
+        id_pk = SeniorHighSchool_StudentPersonalInformation.objects.latest('pk')
         school_year = int(request.POST.get('shs_school_year'))
         classification = int(request.POST.get('shs_stud_classification'))
         grade_level = int(request.POST.get('shs_stud_grade_level'))
@@ -361,6 +365,7 @@ def shs_admission(request):
         where_hear_us = int(request.POST.get('where_hear_us'))
         why_choose_us = int(request.POST.get('why_choose_us'))
         connectivity = request.POST.get('connectivity')
+        gadget = request.POST.get('gadget')
         # reference_no1 = random.randint(1, 999)
         # reference_no2 = random.randint(1, 999)
         ref_no = f'ACI-2020-S{id_pk.pk}'
@@ -389,6 +394,7 @@ def shs_admission(request):
             'where_hear_us': where_hear_us,
             'why_choose_us': why_choose_us,
             'connectivity': connectivity,
+            'gadget': gadget,
             'reference_no': ref_no,
 
             'strands': all_shs_strands,
@@ -494,6 +500,7 @@ def jhs_admission(request):
         where_hear_us = int(request.POST.get('where_hear_us'))
         why_choose_us = int(request.POST.get('why_choose_us'))
         connectivity = request.POST.get('connectivity')
+        gadget = request.POST.get('gadget')
         # reference_no1 = random.randint(1, 999)
         # reference_no2 = random.randint(1, 999)
         ref_no = f'ACI-2020-J{id_pk.pk}'
@@ -521,6 +528,7 @@ def jhs_admission(request):
             'where_hear_us': where_hear_us,
             'why_choose_us': why_choose_us,
             'connectivity': connectivity,
+            'gadget': gadget,
             'reference_no': ref_no,
 
             'grade_levels': all_grade_level,
@@ -622,6 +630,7 @@ def elementary_admission(request):
         where_hear_us = int(request.POST.get('where_hear_us'))
         why_choose_us = int(request.POST.get('why_choose_us'))
         connectivity = request.POST.get('connectivity')
+        gadget = request.POST.get('gadget')
         # reference_no1 = random.randint(1, 99)
         # reference_no2 = random.randint(1, 99)
         ref_no = f'ACI-2020-E{id_pk.pk}'
@@ -649,6 +658,7 @@ def elementary_admission(request):
             'where_hear_us': where_hear_us,
             'why_choose_us': why_choose_us,
             'connectivity': connectivity,
+            'gadget': gadget,
             'reference_no': ref_no,
 
             'grade_levels': all_grade_level,
