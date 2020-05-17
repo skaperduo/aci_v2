@@ -7,7 +7,7 @@
     </div>
     <br>
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalScrollableTitle"
          aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
             <div class="modal-content">
@@ -83,7 +83,11 @@
                 <br>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Confirm</button>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" name="check">
+                        <label class="form-check-label">Agree to all the ACI PRIVACY NOTICE contents</label>
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="checkBtn">Confirm</button>
                 </div>
             </div>
         </div>
