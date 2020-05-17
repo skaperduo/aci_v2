@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/elementary_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/elementary_admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/grad_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/grad_admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/jhs_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/jhs_admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/shs_admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/shs_admission.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
