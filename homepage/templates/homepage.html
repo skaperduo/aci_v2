@@ -1,95 +1,648 @@
 {% extends 'base.html' %}
-{% load static %}
 {% block content %}
+<br>
+<div class="container">
+    <center>
+        <h1>College Online Pre-registration Form</h1>
+    </center>
+    <br>
 
-<div class="row">
-    <div class="col-sm">
-        <img src="{% static 'images/marketing3.jpg'%}" width="100%">
-    </div>
-</div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalScrollableTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">ACI DATA PRIVACY NOTICE</h5>
+                    <!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                    <!--                    <span aria-hidden="true">&times;</span>-->
+                    </button>
+                </div>
+                <div class="modal-body">
 
-<div class="pre_reg_icon">
-    <label>Admissions<br>Ongoing</label><br>
-    <a class="btn btn-info" href="{% url 'pre_reg_landing_page' %}" role="button">Pre-register Now</a>
-</div>
+                    <p><b>
+                        Agusan Colleges, Incorporated is duly obligated to protect all personal data the
+                        institution collects and processes from the students, faculty, administrative personnel,
+                        and alumni. This information is provided under the Philippine Republic Act No. 10173 or
+                        commonly known as "Data Privacy Act 2012."</b>
+                    </p>
+                    <hr>
+                    <br>
 
-
-<section class="section_2 container">
-    <div class="d-flex flex-column text-center">
-        <hr>
-        <center><h1>Be Part of Us, Grow with Us!</h1></center>
-        <br>
-            <div class="row">
-            <div class="col-sm mb-2">
-                <div class="card" style="width: 100%;">
-                    <img src="{% static 'images/BSIT.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-
-                        <a href="{% url 'program_bsit' %}" class="btn btn-primary">About the Program</a>
+                    <p>
+                        <b>Data Collection:<br><br>
+                            Agusan Colleges Incorporated (ACI) collects, processes, and stores personal data.
+                            These includes:<br></b>
+                    <hr>
+                    A. General personal information such as name, contact number, gender, address, place of birth,
+                    nationality, civil status, and email address, etc.<br>
+                    B. Family background including parents name, address, siblings, guardians and contact
+                    numbers.<br>
+                    C. Health records, physical examination results.<br>
+                    D. Disciplinary records.<br>
+                    E. Financial and billing information.<br>
+                    F. Photographic data such as photos, videos, signatures both handwritten and digital.<br>
+                    G. Student research work such as thesis and projects and<br>
+                        H. Students extra-curricular activities.<br>
+                    </p>
+                    <p>
+                    <hr>
+                    <b>Use of Information:<br><br>
+                        Collection of personal data is used solely for the following purposes:</b><br>
+                    <hr>
+                    A. Processing of enrollment and registration.<br>
+                    B. Marketing and Promotion of Agusan Colleges Inc.<br>
+                    C. Processing of statement of accounts.<br>
+                    D. Reference for school events and activities.<br>
+                    E. Evaluation of board examinations.<br>
+                    F. Processing of Tertiary Education Subsidy required by CHED.<br>
+                    G. Processing of scholarship programs offered by the institution.<br>
+                    H. Processing of graduation requirements by the institution.<br>
+                    I. Processing of request for Special Order to CHED.<br>
+                    J. Documentation of students’ data.<br>
+                    K. Posting of schools records in bulletin board.<br>
+                    L .Posting of photos in official school activities to social media platforms such as Facebook and
+                    Instagram.<br>
+                    </p>
+                    <p>
+                    <hr>
+                    <b>Limitation:</b><br>
+                    <hr>
+                    A. ACI is duly obligated to protect personal data and shall be disclosed only to authorized
+                    regulatory authorities such as government agencies, Department of Education, and COmmission on
+                    Higher Education.<br>
+                    B. Private Education Assistance Committee (PEAC).<br>
+                    C. Academic Linkages such as review centers and business partners who help students provide job
+                    opportunities after graduation.<br>
+                    </p>
+                    <p>
+                        <b>Safety and Security:</b><br>
+                        <hr>
+                    ACI is committed to protect personal data through proper administrative and security measures. Only authorized
+                    personel will have access to data collected.
+                    </p>
+                </div>
+                <br>
+                <div class="modal-footer">
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" name="check">
+                        <label class="form-check-label">Agree to all the ACI PRIVACY NOTICE contents</label>
                     </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="checkBtn">Confirm</button>
                 </div>
             </div>
-
-            <div class="col-sm mb-2">
-                <div class="card" style="width: 100%;">
-                    <img src="{% static 'images/BSAIS.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-
-                        <a href="{% url 'program_bsais' %}" class="btn btn-primary">About the Program</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm mb-2">
-                <div class="card" style="width: 100%;">
-                    <img src="{% static 'images/BSBA.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-
-                        <a href="{% url 'program_bsba' %}" class="btn btn-primary">About the Program</a>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <!--        </div>-->
-            <!--        <div class="row">-->
-            <!--            <div class="col-2"></div>-->
-            <!--            <div class="col-8">-->
-            <!--                <div class="row">-->
-            <div class="row">
-            <div class="col-sm mb-2">
-                <div class="card" style="width: 100%;">
-                    <img src="{% static 'images/BEEd.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-
-                        <a href="{% url 'program_beed' %}" class="btn btn-primary">About the Program</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm mb-2">
-                <div class="card" style="width: 100%;">
-                    <img src="{% static 'images/BSEd.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-
-                        <a href="{% url 'program_bsed' %}" class="btn btn-primary">About the Program</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm mb-2">
-                <div class="card" style="width: 100%;">
-                    <img src="{% static 'images/grad_basic.jpg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-
-<!--                        <a href="#" class="btn btn-primary">About the Program</a>-->
-                    </div>
-                </div>
-            </div>
-            </div>
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div class="col-2"></div>-->
         </div>
-</section>
+    </div>
+
+    <p>
+        <b>Instruction</b><br>
+        (1) Fill in all necessary information below.<br>
+        (2) Leave it BLANK if the information is not applicable to you.<br>
+        <b>Note</b>: Fields marked with (<span class="required" style="color: red;">*</span>) are required.
+    </p>
+
+    <form method="POST" action="{% url 'admission' %}"> {% csrf_token %}
+
+        <br>
+        <hr>
+        <b>
+            <lable>Student Classification and Preference</lable>
+        </b>
+        <hr>
+
+        <div class="container">
+            <div class="input-group input-group-sm mb-3" style="width: 270px;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">School Year</span>
+                </div>
+                {% for sy in school_year %}
+                    {% if sy.sy_status == 'active' %}
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                               aria-describedby="inputGroup-sizing-sm" value="{{ sy.pk }}" name="stud_school_year" hidden>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{ sy.school_year }} | {{ sy.semester }}" readonly>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <br>
+            <div class="radio">
+                {% for class in classification|slice:"0:4" %}
+                <div class="col-sm">
+                    <label><input type="radio" name="stud_classification" value="{{ class.pk }}" id="classification{{ class.pk }}" required>
+                        {{ class.classification }}</label> &nbsp&nbsp&nbsp
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text"><span class="required" style="color: red;">*</span>Program</label>
+                        </div>
+                        <select class="custom-select" name="stud_program" id="program" required>
+                            <option value="" selected>Choose...</option>
+                            {% for prog in programs|slice:"0:5" %}
+                            <option value="{{ prog.pk }}">{{ prog.program_title }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text"><span class="required" style="color: red;">*</span>Year Level</label>
+                        </div>
+                        <select class="custom-select" name="stud_year_level" id="yearLevel" required>
+                            <option value="" selected>Choose...</option>
+                            {% for yearlevel in year_level %}
+                            <option value="{{ yearlevel.pk}}">{{ yearlevel.year_level}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text"><span class="required" style="color: red;">*</span>Preferred Shift</label>
+                        </div>
+                        <select class="custom-select" name="stud_shift" id="shift" required>
+                            <option value="" selected>Choose...</option>
+                            {% for shift in shifts|slice:"0:3" %}
+                            <option name="stud_shift" value="{{ shift.pk}}">{{ shift.shift_title}} :
+                                {{ shift.shift_time}}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <b><label>Student Personal Information</label></b>
+        <hr>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Last Name</label>
+                    <input type="text" class="form-control" name="last_name" id="lname" required>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>First Name</label>
+                    <input type="text" class="form-control" name="first_name" id="fname" required>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Middle Name</label>
+                    <input type="text" class="form-control" name="middle_name" id="mname" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Birthdate</label>
+                    <input type="date" class="form-control" name="birthdate" id="bdate" required>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Birth Place</label>
+                    <input type="text" class="form-control" name="birth_place" id="bplace" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label>Religion</label>
+                    <input type="text" class="form-control" name="religion" id="religion">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Nationality</label>
+                    <input type="text" class="form-control" name="nationality" id="nationality" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Gender</label>
+                    <input type="text" class="form-control" name="gender" id="gender" required>
+                </div>
+            </div>
+            <div class="col-sm">
+                <!--            <div class="form-group">-->
+                <!--                <label><span class="required">*</span>Civil Status</label>-->
+                <!--                <input type="text" class="form-control" name="civil_status" required>-->
+                <!--            </div>-->
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Civil Status</label>
+                    <select class="form-control" name="civil_status" id="civilStatus" required>
+                        <option value="" selected>Choose...</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Widowed">Widowed</option>
+                        <option value="Separated">Separated</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Email Address</label>
+                    <input type="email" class="form-control" name="email_address" id="emailAddress" required>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label>Social Media Accounts</label>
+                    <input type="text" class="form-control" name="social_media_accounts" id="socialMedia">
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Mobile Number</label>
+                    <input type="text" class="form-control" name="mobile_number" value="+63 " id="mobileNumber" required>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label>Home Landline Number</label>
+                    <input type="text" class="form-control" name="landline_number" value="085 " id="landlineNumber">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label><span class="required" style="color: red;">*</span>Home Address</label>
+                    <input type="text" class="form-control" name="home_address" id="homeAddress" required>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-10">
+                <div class="card" style="width: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title">Where did you hear about ACI?</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
+                        <div class="form-check">
+                            {% for wer in where %}
+                            <input class="form-check-input" type="radio" name="where_hear_us" value="{{ wer.pk }}" id="whu{{ wer.pk }}">
+                            <label class="form-check-label">
+                                {{ wer.where}}
+                            </label><br>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row row justify-content-center">
+            <div class="col-sm-10">
+                <div class="card" style="width: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title">Why did you choose ACI?</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
+                        <div class="form-check">
+                            {% for wy in why %}
+                            <input class="form-check-input" type="radio" name="why_choose_us" value="{{ wy.pk }}" id="wcu{{ wy.pk }}">
+                            <label class="form-check-label">
+                                {{ wy.why }}
+                            </label><br>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-10">
+                <div class="card" style="width: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="required" style="color: red;">*</span>Connectivity Capacity</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="connectivity"
+                                   value="without connectivity" id="connectivity1" required>
+                            <label class="form-check-label">
+                                Without Connectivity (no internet connection)
+                            </label><br>
+                            <input class="form-check-input" type="radio" name="connectivity"
+                                   value="limited connectivity" id="connectivity2" required>
+                            <label class="form-check-label">
+                                With Limited Connectivity (with limited internet connection)
+                            </label><br>
+                            <input class="form-check-input" type="radio" name="connectivity" value="with connectivity"
+                                   id="connectivity3" required>
+                            <label class="form-check-label">
+                                With Connectivity (with internet connection)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm-10">
+                <div class="card" style="width: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="required" style="color: red;">*</span>Primary gadget use in accessing the internet at home</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gadget"
+                                   value="Desktop/Personal Computer" id="gadget1" required>
+                            <label class="form-check-label">
+                                Desktop/Personal Computer
+                            </label><br>
+                            <input class="form-check-input" type="radio" name="gadget"
+                                   value="Laptop" id="gadget2" required>
+                            <label class="form-check-label">
+                                Laptop
+                            </label><br>
+                            <input class="form-check-input" type="radio" name="gadget" value="Smartphone/Mobile Phone"
+                                   id="gadget3" required>
+                            <label class="form-check-label">
+                                Smartphone/Mobile Phone
+                            </label><br>
+                            <input class="form-check-input" type="radio" name="gadget" value="Tablet" id="gadget4"
+                                   required>
+                            <label class="form-check-label">
+                                Tablet
+                            </label><br>
+                            <input class="form-check-input" type="radio" name="gadget" value="None of the Above"
+                                   id="gadget5" required>
+                            <label class="form-check-label">
+                                None of the Above
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row justify-content-center">
+            <button type="submit" class="btn btn-primary" value="select" style="width:150px;">Proceed</button>
+        </div>
+        <br>
+        <br>
+    </form>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="page-button1">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <div class="row">
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_classification" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_program" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_yearLevel" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_shift" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_lname" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_fname" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_mname" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_bdate" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_bplace" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_religion" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_nationality" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_gender" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_civilStatus" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_emailAddress" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_socialMedia" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_mobileNumber" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_landlineNumber" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_homeAddress" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_whu" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_wcu" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_connectivity" readonly>
+          <input class="form-control" type="text" placeholder="Readonly input here..." id="txt_gadget" readonly>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+    <script>
+        $(document).ready(function () {
+            $('#page-button1').click(function () {
+
+                if(document.getElementById('classification1').checked){
+                    $('#txt_classification').val('Old Students');
+                    $('#classification1').val($('#classification1').val());
+                }else if(document.getElementById('classification2').checked){
+                    $('#txt_classification').val('New Students');
+                    $('#classification2').val($('#classification2').val());
+                }else if(document.getElementById('classification3').checked){
+                    $('#txt_classification').val('Returnee');
+                    $('#classification3').val($('#classification3').val());
+                }else if(document.getElementById('classification4').checked){
+                    $('#txt_classification').val('Transferee');
+                    $('#classification4').val($('#classification4').val());
+                }
+
+                if($('#program').val() == '1'){
+                    $('#txt_program').val('Bachelor of Elementary Education');
+                    $('#program').val($('#program').val());
+                }else if($('#program').val() == '2'){
+                    $('#txt_program').val('Bachelor of Secondary Education');
+                    $('#program').val($('#program').val());
+                }else if($('#program').val() == '3'){
+                    $('#txt_program').val('Bachelor of Science in Business Administration');
+                    $('#program').val($('#program').val());
+                }else if($('#program').val() == '4'){
+                    $('#txt_program').val('Bachelor of Science in Accounting Information System');
+                    $('#program').val($('#program').val());
+                }else if($('#program').val() == '5'){
+                    $('#txt_program').val('Bachelor of Science in Information Technology');
+                    $('#program').val($('#program').val());
+                }
+
+                if($('#yearLevel').val() == '1'){
+                    $('#txt_yearLevel').val('First Year Level');
+                    $('#yearLevel').val($('#yearLevel').val());
+                }else if($('#yearLevel').val() == '2'){
+                    $('#txt_yearLevel').val('Second Year Level');
+                    $('#yearLevel').val($('#yearLevel').val());
+                }else if($('#yearLevel').val() == '3'){
+                    $('#txt_yearLevel').val('Third Year Level');
+                    $('#yearLevel').val($('#yearLevel').val());
+                }else if($('#yearLevel').val() == '4'){
+                    $('#txt_yearLevel').val('Fourth Year Level');
+                    $('#yearLevel').val($('#yearLevel').val());
+                }
+
+                if($('#shift').val() == '1'){
+                    $('#txt_shift').val('Morning Session : 7:30 am - 12:00 pm');
+                    $('#shift').val($('#shift').val());
+                }else if($('#shift').val() == '2'){
+                    $('#txt_shift').val('Afternoon Session : 1:15 pm - 5:15 pm');
+                    $('#shift').val($('#shift').val());
+                }else if($('#shift').val() == '3'){
+                    $('#txt_shift').val('Evening Session : 5:00 pm - 9:30 pm');
+                    $('#shift').val($('#shift').val());
+                }
+
+                $('#txt_lname').val($('#lname').val());
+                $('#lname').val($('#lname').val());
+
+                $('#txt_fname').val($('#fname').val());
+                $('#fname').val($('#fname').val());
+
+                $('#txt_mname').val($('#mname').val());
+                $('#mname').val($('#mname').val());
+
+                $('#txt_bdate').val($('#bdate').val());
+                $('#bdate').val($('#bdate').val());
+
+                $('#txt_bplace').val($('#bplace').val());
+                $('#bplace').val($('#bplace').val());
+
+                $('#txt_religion').val($('#religion').val());
+                $('#religion').val($('#religion').val());
+
+                $('#txt_nationality').val($('#nationality').val());
+                $('#nationality').val($('#nationality').val());
+
+                $('#txt_gender').val($('#gender').val());
+                $('#gender').val($('#gender').val());
+
+                $('#txt_civilStatus').val($('#civilStatus').val());
+                $('#civilStatus').val($('#civilStatus').val());
+
+                $('#txt_emailAddress').val($('#emailAddress').val());
+                $('#emailAddress').val($('#emailAddress').val());
+
+                $('#txt_socialMedia').val($('#socialMedia').val());
+                $('#socialMedia').val($('#socialMedia').val());
+
+                $('#txt_mobileNumber').val($('#mobileNumber').val());
+                $('#mobileNumber').val($('#mobileNumber').val());
+
+                $('#txt_landlineNumber').val($('#landlineNumber').val());
+                $('#landlineNumber').val($('#landlineNumber').val());
+
+                $('#txt_homeAddress').val($('#homeAddress').val());
+                $('#homeAddress').val($('#homeAddress').val());
+
+                if(document.getElementById('whu1').checked){
+                    $('#txt_whu').val('TV/Radio');
+                    $('#whu1').val($('#whu1').val());
+                }else if(document.getElementById('whu2').checked){
+                    $('#txt_whu').val('Digital/Website');
+                    $('#whu2').val($('#whu2').val());
+                }else if(document.getElementById('whu3').checked){
+                    $('#txt_whu').val('Tarpaulin/Billboard');
+                    $('#whu3').val($('#whu3').val());
+                }else if(document.getElementById('whu4').checked){
+                    $('#txt_whu').val('Flyer/Brochure');
+                    $('#whu4').val($('#whu4').val());
+                }else if(document.getElementById('whu5').checked){
+                    $('#txt_whu').val('School/Visit');
+                    $('#whu5').val($('#whu5').val());
+                }else if(document.getElementById('whu6').checked){
+                    $('#txt_whu').val('Friends/Family');
+                    $('#whu6').val($('#whu6').val());
+                }
+
+                if(document.getElementById('wcu1').checked){
+                    $('#txt_wcu').val('Higher Chance of Employment');
+                    $('#wcu1').val($('#wcu1').val());
+                }else if(document.getElementById('wcu2').checked){
+                    $('#txt_wcu').val('Diverse Environment');
+                    $('#wcu2').val($('#wcu2').val());
+                }else if(document.getElementById('wcu3').checked){
+                    $('#txt_wcu').val('Good reputation/track record');
+                    $('#wcu3').val($('#wcu3').val());
+                }else if(document.getElementById('wcu4').checked){
+                    $('#txt_wcu').val('Member of a Family is Alumnus/a');
+                    $('#wcu4').val($('#wcu4').val());
+                }else if(document.getElementById('wcu5').checked){
+                    $('#txt_wcu').val('Friends are here');
+                    $('#wcu5').val($('#wcu5').val());
+                }else if(document.getElementById('wcu6').checked){
+                    $('#txt_wcu').val('Campus is Near');
+                    $('#wcu6').val($('#wcu6').val());
+                }
+
+                if(document.getElementById('connectivity1').checked){
+                    $('#txt_connectivity').val('Without Connectivity');
+                    $('#connectivity1').val($('#connectivity1').val());
+                }else if(document.getElementById('connectivity2').checked){
+                    $('#txt_connectivity').val('With Limited Connectivity');
+                    $('#connectivity2').val($('#connectivity2').val());
+                }else if(document.getElementById('connectivity3').checked){
+                    $('#txt_connectivity').val('With Connectivity');
+                    $('#connectivity3').val($('#connectivity3').val());
+                }
+
+                if(document.getElementById('gadget1').checked){
+                    $('#txt_gadget').val('Desktop/Personal Computer');
+                    $('#gadget1').val($('#gadget1').val());
+                }else if(document.getElementById('gadget2').checked){
+                    $('#txt_gadget').val('Laptop');
+                    $('#gadget2').val($('#gadget2').val());
+                }else if(document.getElementById('gadget3').checked){
+                    $('#txt_gadget').val('Smartphone/Mobile Phone');
+                    $('#gadget3').val($('#gadget3').val());
+                }else if(document.getElementById('gadget4').checked){
+                    $('#txt_gadget').val('Tablet');
+                    $('#gadget4').val($('#gadget4').val());
+                }else if(document.getElementById('gadget5').checked){
+                    $('#txt_gadget').val('None of the Above');
+                    $('#gadget5').val($('#gadget5').val());
+                }
+
+            });
+        });
+    </script>
 
 {% endblock %}

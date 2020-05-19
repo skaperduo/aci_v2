@@ -124,9 +124,9 @@
             </div>
             <br>
             <div class="radio">
-                {% for class in classification %}
+                {% for class in classification|slice:"0:4" %}
                 <div class="col-sm">
-                    <label><input type="radio" name="stud_classification" value="{{ class.pk }}" required>
+                    <label><input type="radio" name="stud_classification" value="{{ class.pk }}" id="classification{{ class.pk }}" required>
                         {{ class.classification }}</label> &nbsp&nbsp&nbsp
                 </div>
                 {% endfor %}
@@ -141,7 +141,7 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text"><span class="required" style="color: red;">*</span>Program</label>
                         </div>
-                        <select class="custom-select" name="stud_program" required>
+                        <select class="custom-select" name="stud_program" id="program" required>
                             <option value="" selected>Choose...</option>
                             {% for prog in programs|slice:"0:5" %}
                             <option value="{{ prog.pk }}">{{ prog.program_title }}</option>
@@ -155,7 +155,7 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text"><span class="required" style="color: red;">*</span>Year Level</label>
                         </div>
-                        <select class="custom-select" name="stud_year_level" required>
+                        <select class="custom-select" name="stud_year_level" id="yearLevel" required>
                             <option value="" selected>Choose...</option>
                             {% for yearlevel in year_level %}
                             <option value="{{ yearlevel.pk}}">{{ yearlevel.year_level}}</option>
@@ -169,9 +169,9 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text"><span class="required" style="color: red;">*</span>Preferred Shift</label>
                         </div>
-                        <select class="custom-select" name="stud_shift" required>
+                        <select class="custom-select" name="stud_shift" id="shift" required>
                             <option value="" selected>Choose...</option>
-                            {% for shift in shifts %}
+                            {% for shift in shifts|slice:"0:3" %}
                             <option name="stud_shift" value="{{ shift.pk}}">{{ shift.shift_title}} :
                                 {{ shift.shift_time}}
                             </option>
@@ -191,19 +191,19 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Last Name</label>
-                    <input type="text" class="form-control" name="last_name" required>
+                    <input type="text" class="form-control" name="last_name" id="lname" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>First Name</label>
-                    <input type="text" class="form-control" name="first_name" required>
+                    <input type="text" class="form-control" name="first_name" id="fname" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Middle Name</label>
-                    <input type="text" class="form-control" name="middle_name" required>
+                    <input type="text" class="form-control" name="middle_name" id="mname" required>
                 </div>
             </div>
         </div>
@@ -212,13 +212,13 @@
             <div class="col-sm-3">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Birthdate</label>
-                    <input type="date" class="form-control" name="birthdate" required>
+                    <input type="date" class="form-control" name="birthdate" id="bdate" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Birth Place</label>
-                    <input type="text" class="form-control" name="birth_place" required>
+                    <input type="text" class="form-control" name="birth_place" id="bplace" required>
                 </div>
             </div>
         </div>
@@ -227,13 +227,13 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label>Religion</label>
-                    <input type="text" class="form-control" name="religion">
+                    <input type="text" class="form-control" name="religion" id="religion">
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Nationality</label>
-                    <input type="text" class="form-control" name="nationality" required>
+                    <input type="text" class="form-control" name="nationality" id="nationality" required>
                 </div>
             </div>
         </div>
@@ -242,7 +242,7 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Gender</label>
-                    <input type="text" class="form-control" name="gender" required>
+                    <input type="text" class="form-control" name="gender" id="gender" required>
                 </div>
             </div>
             <div class="col-sm">
@@ -251,8 +251,8 @@
                 <!--                <input type="text" class="form-control" name="civil_status" required>-->
                 <!--            </div>-->
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1"><span class="required" style="color: red;">*</span>Civil Status</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="civil_status" required>
+                    <label><span class="required" style="color: red;">*</span>Civil Status</label>
+                    <select class="form-control" name="civil_status" id="civilStatus" required>
                         <option value="" selected>Choose...</option>
                         <option value="Single">Single</option>
                         <option value="Married">Married</option>
@@ -267,13 +267,13 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Email Address</label>
-                    <input type="email" class="form-control" name="email_address" required>
+                    <input type="email" class="form-control" name="email_address" id="emailAddress" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label>Social Media Accounts</label>
-                    <input type="text" class="form-control" name="social_media_accounts">
+                    <input type="text" class="form-control" name="social_media_accounts" id="socialMedia">
                 </div>
             </div>
         </div>
@@ -282,13 +282,13 @@
             <div class="col-sm">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Mobile Number</label>
-                    <input type="text" class="form-control" name="mobile_number" value="+63 " required>
+                    <input type="text" class="form-control" name="mobile_number" value="+63 " id="mobileNumber" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label>Home Landline Number</label>
-                    <input type="text" class="form-control" name="landline_number" value="085 ">
+                    <input type="text" class="form-control" name="landline_number" value="085 " id="landlineNumber">
                 </div>
             </div>
         </div>
@@ -297,7 +297,7 @@
             <div class="col-12">
                 <div class="form-group">
                     <label><span class="required" style="color: red;">*</span>Home Address</label>
-                    <input type="text" class="form-control" name="home_address" required>
+                    <input type="text" class="form-control" name="home_address" id="homeAddress" required>
                 </div>
             </div>
         </div>
@@ -312,7 +312,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
                         <div class="form-check">
                             {% for wer in where %}
-                            <input class="form-check-input" type="radio" name="where_hear_us" value="{{ wer.pk}}">
+                            <input class="form-check-input" type="radio" name="where_hear_us" value="{{ wer.pk }}" id="whu{{ wer.pk }}">
                             <label class="form-check-label">
                                 {{ wer.where}}
                             </label><br>
@@ -331,9 +331,9 @@
                         <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
                         <div class="form-check">
                             {% for wy in why %}
-                            <input class="form-check-input" type="radio" name="why_choose_us" value="{{ wy.pk}}">
+                            <input class="form-check-input" type="radio" name="why_choose_us" value="{{ wy.pk }}" id="wcu{{ wy.pk }}">
                             <label class="form-check-label">
-                                {{ wy.why}}
+                                {{ wy.why }}
                             </label><br>
                             {% endfor %}
                         </div>
@@ -350,17 +350,17 @@
                         <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="connectivity"
-                                   value="without connectivity" required>
+                                   value="without connectivity" id="connectivity1" required>
                             <label class="form-check-label">
                                 Without Connectivity (no internet connection)
                             </label><br>
                             <input class="form-check-input" type="radio" name="connectivity"
-                                   value="limited connectivity" required>
+                                   value="limited connectivity" id="connectivity2" required>
                             <label class="form-check-label">
                                 With Limited Connectivity (with limited internet connection)
                             </label><br>
                             <input class="form-check-input" type="radio" name="connectivity" value="with connectivity"
-                                   required>
+                                   id="connectivity3" required>
                             <label class="form-check-label">
                                 With Connectivity (with internet connection)
                             </label>
@@ -378,27 +378,27 @@
                         <h6 class="card-subtitle mb-2 text-muted">(Choose One)</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gadget"
-                                   value="Desktop/Personal Computer" required>
+                                   value="Desktop/Personal Computer" id="gadget1" required>
                             <label class="form-check-label">
                                 Desktop/Personal Computer
                             </label><br>
                             <input class="form-check-input" type="radio" name="gadget"
-                                   value="Laptop" required>
+                                   value="Laptop" id="gadget2" required>
                             <label class="form-check-label">
                                 Laptop
                             </label><br>
                             <input class="form-check-input" type="radio" name="gadget" value="Smartphone/Mobile Phone"
-                                   required>
+                                   id="gadget3" required>
                             <label class="form-check-label">
                                 Smartphone/Mobile Phone
                             </label><br>
-                            <input class="form-check-input" type="radio" name="gadget" value="Tablet"
+                            <input class="form-check-input" type="radio" name="gadget" value="Tablet" id="gadget4"
                                    required>
                             <label class="form-check-label">
                                 Tablet
                             </label><br>
                             <input class="form-check-input" type="radio" name="gadget" value="None of the Above"
-                                   required>
+                                   id="gadget5" required>
                             <label class="form-check-label">
                                 None of the Above
                             </label>
@@ -408,11 +408,13 @@
             </div>
         </div>
         <br>
+
         <div class="row justify-content-center">
             <button type="submit" class="btn btn-primary" value="select" style="width:150px;">Proceed</button>
         </div>
         <br>
         <br>
     </form>
+
 </div>
 {% endblock %}

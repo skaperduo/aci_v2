@@ -59,7 +59,7 @@ class WhyDidYouChooseUs(models.Model):
     why = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.why
+        return str(self.pk) + ' ' + self.why
 
 
 class SchoolYear(models.Model):

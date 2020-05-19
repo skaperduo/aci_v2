@@ -11,6 +11,8 @@ from .forms import StudentPersonalInformationForm, SHS_StudentPersonalInformatio
     JHS_StudentPersonalInformationForm, ELEM_StudentPersonalInformationForm, GradStudentPersonalInformationForm
 
 import random
+import urllib
+from django.urls import reverse
 
 
 # Create your views here.
@@ -145,6 +147,12 @@ def confirmation(request):
         middle_name = request.POST.get('middle_name')
         ref_id_no = request.POST.get('stud_reference_no')
 
+        context = {
+            'last_name': last_name,
+            'first_name': first_name,
+            'middle_name': middle_name,
+        }
+
         if form.is_valid():
             form.save()
             subject = "ACI Online Pre-registration Confirmation"
@@ -163,12 +171,13 @@ def confirmation(request):
             to_list = [email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        # return redirect('confirm')
-        return render(request, 'college_grad_confirmation.html', {
-            'last_name': last_name,
-            'first_name': first_name,
-            'middle_name': middle_name,
-        })
+        return redirect('college_grad_confirm')
+        # return render(request, 'college_grad_confirmation.html', {
+        #     'last_name': last_name,
+        #     'first_name': first_name,
+        #     'middle_name': middle_name,
+        # })
+
     else:
         return render(request, 'confirmation.html', {
             'programs': all_programs,
@@ -314,12 +323,12 @@ def grad_confirmation(request):
             to_list = [email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        # return redirect('confirm')
-        return render(request, 'college_grad_confirmation.html', {
-            'last_name': grad_last_name,
-            'first_name': grad_first_name,
-            'middle_name': grad_middle_name,
-        })
+        return redirect('college_grad_confirm')
+        # return render(request, 'college_grad_confirmation.html', {
+        #     'last_name': grad_last_name,
+        #     'first_name': grad_first_name,
+        #     'middle_name': grad_middle_name,
+        # })
     else:
         return render(request, 'grad_confirmation.html', {
             'programs': all_programs,
@@ -451,12 +460,12 @@ def shs_confirmation(request):
             to_list = [email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        # return redirect('confirm')
-        return render(request, 'college_grad_confirmation.html', {
-            'last_name': shs_last_name,
-            'first_name': shs_first_name,
-            'middle_name': shs_middle_name,
-        })
+        return redirect('college_grad_confirm')
+        # return render(request, 'college_grad_confirmation.html', {
+        #     'last_name': shs_last_name,
+        #     'first_name': shs_first_name,
+        #     'middle_name': shs_middle_name,
+        # })
 
     else:
         return render(request, 'shs_admission.html', {
@@ -582,12 +591,12 @@ def jhs_confirmation(request):
             to_list = [email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        # return redirect('confirm')
-        return render(request, 'college_grad_confirmation.html', {
-            'last_name': jhs_last_name,
-            'first_name': jhs_first_name,
-            'middle_name': jhs_middle_name,
-        })
+        return redirect('college_grad_confirm')
+        # return render(request, 'college_grad_confirmation.html', {
+        #     'last_name': jhs_last_name,
+        #     'first_name': jhs_first_name,
+        #     'middle_name': jhs_middle_name,
+        # })
 
     else:
         return render(request, 'jhs_admission.html', {
@@ -712,12 +721,12 @@ def elem_confirmation(request):
             to_list = [email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        # return redirect('confirm')
-        return render(request, 'college_grad_confirmation.html', {
-            'last_name': elementary_last_name,
-            'first_name': elementary_first_name,
-            'middle_name': elementary_middle_name,
-        })
+        return redirect('college_grad_confirm')
+        # return render(request, 'college_grad_confirmation.html', {
+        #     'last_name': elementary_last_name,
+        #     'first_name': elementary_first_name,
+        #     'middle_name': elementary_middle_name,
+        # })
 
     else:
         return render(request, 'elementary_admission.html', {
