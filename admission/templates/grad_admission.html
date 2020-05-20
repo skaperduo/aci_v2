@@ -158,7 +158,7 @@
                         </div>
                         <select class="custom-select" name="grad_stud_year_level" required>
                             <option value="" selected>Choose...</option>
-                            {% for yearlevel in year_level %}
+                            {% for yearlevel in year_level|slice:"0:2" %}
                             <option value="{{ yearlevel.pk}}">{{ yearlevel.year_level}}</option>
                             {% endfor %}
                         </select>

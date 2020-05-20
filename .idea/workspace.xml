@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/admission.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/admission.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/college_grad_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/college_grad_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/elem_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/elem_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/grad_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/grad_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/jhs_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/jhs_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/pre_reg_landing_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/pre_reg_landing_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/templates/shs_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/admission/templates/shs_confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -116,14 +102,14 @@
     </state>
     <state x="259" y="9" key="SettingsEditor/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1589184680060" />
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587708757297" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1589842463145">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1590015332438">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1589441619166" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1589714485139" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1589922216222" />
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-306.1920.1040@0.0.1366.728" timestamp="1587725120095" />
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587704392233" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589842463145" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590015332438" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587678100843" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/1920.316.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587499369140" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588155010293">
