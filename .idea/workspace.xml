@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0dd27d71-a84b-4bb5-b31d-071b74bc29d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_panel/templates/admin_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_panel/templates/admin_panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/admission/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
@@ -31,6 +31,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -103,7 +104,7 @@
     </state>
     <state x="259" y="9" key="SettingsEditor/-1366.306.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1589184680060" />
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587708757297" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1590196385468">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1590277496540">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1589441619166" />
@@ -111,7 +112,7 @@
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-306.1920.1040@0.0.1366.728" timestamp="1587725120095" />
     <state x="467" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-316.1920.1040@0.0.1366.728" timestamp="1587704392233" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1590121451251" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590043538563" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590277496540" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587678100843" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/1920.316.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587499369140" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588155010293">

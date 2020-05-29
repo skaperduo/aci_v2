@@ -43,6 +43,9 @@ def admission(request):
     all_school_year = SchoolYear.objects.all
 
     if request.method == "POST":
+        if request.META.get('PATH_INFO') != request.path:
+            return redirect('admission')
+
         # form = StudentPersonalInformationForm(request.POST or None)
         id_pk = StudentPersonalInformation.objects.latest('pk')
         school_year = int(request.POST.get('stud_school_year'))

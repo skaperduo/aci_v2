@@ -12,7 +12,7 @@ class SPIAdmin(admin.ModelAdmin):
     search_fields = ('last_name', 'first_name', 'middle_name', 'stud_reference_no')
     list_display = ('last_name', 'first_name', 'middle_name', 'stud_program', 'connectivity', 'date_registered',
                     'mobile_number', 'stud_reference_no')
-    list_filter = ('stud_program', 'connectivity', 'date_registered')
+    list_filter = ('stud_program', 'stud_year_level', 'connectivity', 'date_registered')
 
 
 class Grad_SPIAdmin(admin.ModelAdmin):
