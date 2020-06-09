@@ -146,6 +146,9 @@
                             {% for prog in programs|slice:"0:5" %}
                             <option value="{{ prog.pk }}">{{ prog.program_title }}</option>
                             {% endfor %}
+                            {% for prog in programs|slice:"7:8" %}
+                            <option value="{{ prog.pk }}">{{ prog.program_title }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
